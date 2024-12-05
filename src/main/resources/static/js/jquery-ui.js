@@ -7261,7 +7261,7 @@
             buttonImage: "", // URL for trigger button image
             buttonImageOnly: false, // True if the image appears alone, false if it appears on a button
             hideIfNoPrevNext: false, // True to hide next/previous month links
-            // if not applicable, false to just disable them
+            // if not appliCable, false to just disable them
             navigationAsDateFormat: false, // True if date formatting applied to prev/today/next links
             gotoCurrent: false, // True if today link goes back to current selection instead
             changeMonth: false, // True if month can be selected directly, false if only prev/next
