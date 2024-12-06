@@ -251,7 +251,7 @@ public class MainController {
 
 	@GetMapping("/Pune")
 	public String Pune() {
-		return "pune";
+		return "Pune";
 	}
 
 	@GetMapping("/city/{name}")

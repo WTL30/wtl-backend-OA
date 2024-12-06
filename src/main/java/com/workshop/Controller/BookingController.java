@@ -542,12 +542,23 @@ public class BookingController {
 	
 	@GetMapping("/getUserBooking")
 	public String getUserBooking(Model model,Principal principal) {
-		User user = userService.getByUsername(principal.getName());
-		String userid  = user.getUserid();
-		List<Booking> booking = ser.getBooking(userid);
-		System.out.println(booking);
-		model.addAttribute("booking",booking);
-		return "myTrip";
+		boolean loggedIn = principal != null;
+
+        // Add the loggedIn attribute to the model
+        model.addAttribute("loggedIn", loggedIn);
+        
+		if(principal != null) {
+			User user = userService.getByUsername(principal.getName());
+			String userid  = user.getUserid();
+			List<Booking> booking = ser.getBooking(userid);
+			System.out.println(booking);
+			model.addAttribute("booking",booking);
+			
+			return "myTrip";
+		}
+		else {
+			return "login";
+		}
 	}
 	
 	
