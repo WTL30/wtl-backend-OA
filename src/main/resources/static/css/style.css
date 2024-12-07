@@ -2194,7 +2194,7 @@ body {
     color: #fff;
     border-color: #2273e5; }
   #back-to-top.active {
-    right: 5px;
+    right: 1px;
     opacity: 1;
     visibility: visible; }
 
