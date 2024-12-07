@@ -2166,7 +2166,6 @@ body {
 /*======== back-to-top =========*/
 #back-to-top {
   position: fixed;
-  right: -150px;
   bottom: 40px;
   z-index: 9999;
   width: 40px;
@@ -2195,7 +2194,7 @@ body {
     color: #fff;
     border-color: #2273e5; }
   #back-to-top.active {
-    right: 30px;
+    right: 5px;
     opacity: 1;
     visibility: visible; }
 
