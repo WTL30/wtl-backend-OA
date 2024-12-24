@@ -2627,7 +2627,7 @@
                         <span class="price__num">$88.00</span>
                         <span class="price__text">Per night</span>
                       </p>
-                      <a href="hotel-single.html" class="btn-text"
+                     <a href="hotel-single.html" class="btn-text"
                         >See details<i class="la la-angle-right"></i
                       ></a>
                     </div>
@@ -3373,7 +3373,7 @@
                     <!-- <p>
                         <span class="price__from">From</span>
                         <span class="price__num">$45.00</span>
-                        <span class="price__text">Per day</span>
+                        <span class="price__text">Pe day</span>
                       </p> -->
                     <!-- <a href="car-single.html" class="btn-text"
                         >See details<i class="la la-angle-right"></i
@@ -3947,8 +3947,29 @@
     <a th:href="@{/contact}">Contact</a>
   </p>
 </div>
+<style>
+  .responsive-flex {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+  }
 
-<div style="display: flex; justify-content: space-around; text-align: center;">
+  /* Mobile View */
+  @media (max-width: 768px) {
+    .responsive-flex {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  /* Desktop View */
+  @media (min-width: 769px) {
+    .responsive-flex {
+      flex-direction: row;
+    }
+  }
+</style>
+<div class="responsive-flex">
   <!-- Popular Cities -->
   <div style="padding: 10px; border-radius: 5px; max-width: 300px;">
     <h5 class="text-dark" style="margin: 10px 0; margin-left: 15px; color: #333; font-size: 18px;">Popular Cities</h5>
@@ -4161,7 +4182,7 @@
 							                      <a href="https://x.com/world_trip_link"  class="bg-6 text-white"><i class="lab la-twitter"></i></a>
 							                    </li>
 							                    <li>
-							                      <a href="https://www.instagram.com/worldtriplink/" class="bg-7 text-white"><i class="lab la-instagram"></i></a>
+							                      <a href="https://www.instagram.c/worldtriplink/" class="bg-7 text-white"><i class="lab la-instagram"></i></a>
 							                    </li>
 							                    <li>
 							                      <a href="https://www.linkedin.com/in/world-trip-link9562762a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="bg-5 text-white"><i class="lab la-linkedin-in"></i></a>

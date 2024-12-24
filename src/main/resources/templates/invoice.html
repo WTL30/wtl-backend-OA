@@ -636,51 +636,105 @@
             <p><strong>Distance:</strong> <span th:text="${distance}"></span></p>
             
             <hr>
+            <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+            </script>
+            <script type="text/javascript">
+              (function(){
+                  emailjs.init({
+                    publicKey: "template_enwpwhh",
+                  });
+              })();
+            </script>
             
-                <form id="bookForm" th:action="@{/book}" method="post" style="position: relative;">
-                    <!-- Hidden input fields for cab information -->
-                    <input type="hidden" name="cabId" th:value="${cabId}" />
-                    <input type="hidden" name="modelName" th:value="${modelName}" />
-                    <input type="hidden" name="modelType" th:value="${modelType}" />
-                    <input type="hidden" name="seats" th:value="${seats}" />
-                    <input type="hidden" name="fuelType" th:value="${fuelType}" />
-                    <input type="hidden" name="availability" th:value="${availability}" />
-                    <input type="hidden" name="price" th:value="${price}" />
-                     <input type="hidden" name="pickupLocation" th:value="${pickupLocation}" />
-        <input type="hidden" name="dropLocation" th:value="${dropLocation}" />
-        <input type="hidden" name="date" th:value="${date}" />
-        <input type="hidden" name="returndate" th:value="${returndate}" />
-        <input type="hidden" name="time" th:value="${time}" />
-        <input type="hidden" name="tripType" th:value="${tripType}" />
-                <input type="hidden" name="distance" th:value="${distance}" />
-                                <input type="hidden" name="service" th:value="${service}" />
-                                <input type="hidden" name="gst" th:value="${gst}" />
-                                <input type="hidden" name="total" th:value="${total}" />
-                               <input type="hidden" name="days" th:value="${days}" />
-                                                              <input type="hidden" name="driverrate" th:value="${driverrate}" />
-                               
-                                
-                
-        
-
-                    <div class="form-group">
-                        
-                        <input type="text" name="name" class="form-control" placeholder="Name" required />
-                    </div>
-                    <div class="form-group">
-                       
-                        <input type="email" name="email" class="form-control" placeholder="Email" required/>
-                    </div>
-                    <div class="form-group">
-                        
-                        <input type="number" name="phone" class="form-control" placeholder="Phone" required/>
-                    </div>
-                    <div class="row mt-4">
-                        <div class="col-md-6" id="bt">
-                            <button style="height: 50px; width: 200px; margin: auto; position: relative; " type="submit" class="btn btn-primary">Book Now</button>
-                        </div>
-                    </div>
-                </form>
+            <form id="bookForm" th:action="@{/book}" method="post" style="position: relative;" onsubmit="sendEmail(event)">
+              <!-- Hidden input fields for cab information -->
+              <input type="hidden" name="cabId" th:value="${cabId}" />
+              <input type="hidden" name="modelName" th:value="${modelName}" />
+              <input type="hidden" name="modelType" th:value="${modelType}" />
+              <input type="hidden" name="seats" th:value="${seats}" />
+              <input type="hidden" name="fuelType" th:value="${fuelType}" />
+              <input type="hidden" name="availability" th:value="${availability}" />
+              <input type="hidden" name="price" th:value="${price}" />
+              <input type="hidden" name="pickupLocation" th:value="${pickupLocation}" />
+              <input type="hidden" name="dropLocation" th:value="${dropLocation}" />
+              <input type="hidden" name="date" th:value="${date}" />
+              <input type="hidden" name="returndate" th:value="${returndate}" />
+              <input type="hidden" name="time" th:value="${time}" />
+              <input type="hidden" name="tripType" th:value="${tripType}" />
+              <input type="hidden" name="distance" th:value="${distance}" />
+              <input type="hidden" name="service" th:value="${service}" />
+              <input type="hidden" name="gst" th:value="${gst}" />
+              <input type="hidden" name="total" th:value="${total}" />
+              <input type="hidden" name="days" th:value="${days}" />
+              <input type="hidden" name="driverrate" th:value="${driverrate}" />
+              
+              <!-- User Input Fields -->
+              <div class="form-group">
+                  <input type="text" name="name" class="form-control" placeholder="Name" required />
+              </div>
+              <div class="form-group">
+                  <input type="email" name="email" class="form-control" placeholder="Email" required/>
+              </div>
+              <div class="form-group">
+                  <input type="number" name="phone" class="form-control" placeholder="Phone" required/>
+              </div>
+              <div class="row mt-4">
+                  <div class="col-md-6" id="bt">
+                      <button style="height: 50px; width: 200px; margin: auto; position: relative;" type="submit" class="btn btn-primary">Book Now</button>
+                  </div>
+              </div>
+          </form>
+          
+          <!-- EmailJS Script -->
+          <script type="text/javascript">
+              // Initialize EmailJS with your user ID
+              emailjs.init('c2niZRDENJN8AUIY2');  // Replace with your user ID from EmailJS
+          
+              function sendEmail(event) {
+                  event.preventDefault(); // Prevent form from submitting normally
+                  
+                  // Get the form data
+                  var formData = new FormData(document.getElementById('bookForm'));
+                  
+                  // Create an object to store the form values
+                  var emailData = {
+                      cabId: formData.get('cabId'),
+                      modelName: formData.get('modelName'),
+                      modelType: formData.get('modelType'),
+                      seats: formData.get('seats'),
+                      fuelType: formData.get('fuelType'),
+                    availability: formData.get('availability'),
+                      price: formData.get('price'),
+                      pickupLocation: formData.get('pickupLocation'),
+                      dropLocation: formData.get('dropLocation'),
+                      date: formData.get('date'),
+                      returndate: formData.get('returndate'),
+                      time: formData.get('time'),
+                      tripType: formData.get('tripType'),
+                      distance: formData.get('distance'),
+                      service: formData.get('service'),
+                      gst: formData.get('gst'),
+                      total: formData.get('total'),
+                      days: formData.get('days'),
+                      driverrate: formData.get('driverrate'),
+                      name: formData.get('name'),
+                      email: formData.get('email'),
+                      phone: formData.get('phone')
+                  };
+          
+                  // Send the email using EmailJS
+                  emailjs.send('service_b01m05p', 'template_enwpwhh', emailData)
+                      .then(function(response) {
+                          console.log('Email sent successfully:', response);
+                          alert('Your booking has been confirmed!');
+                      }, function(error) {
+                          console.log('Failed to send email:', error);
+                          alert('Failed to send email. Please try again.');
+                      });
+              }
+          </script>
+          
             </div>
         </div>
         
@@ -917,7 +971,7 @@
             </div>
             <div class="modal-body">
               <div class="contact-form-action">
-                <form method="post">
+        <form method="post">
                   <div class="input-box">
                     <label class="label-text">Username</label>
                     <div class="form-group">
