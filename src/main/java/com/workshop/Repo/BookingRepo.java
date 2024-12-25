@@ -11,9 +11,9 @@ import com.workshop.Entity.Booking;
 @Repository
 public interface BookingRepo extends JpaRepository<Booking, Integer>{
 
-	@Query("SELECT MAX(b.bookingId) FROM Booking b")
+	@Query("SELECT MAX(b.bookid) FROM Booking b")
 	String findMaxBookingId();
 
 	
-	List<Booking> findByUserid(String userid);
+	List<Booking> findByUserId(String userid);
 }

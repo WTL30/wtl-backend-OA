@@ -32,7 +32,7 @@ public class BookingService {
 	    }
 	 
 	 public List<Booking> getBooking(String userid){
-		 return repo.findByUserid(userid);
+		 return repo.findByUserId(userid);
 	 }
 	 
 	 public List<Booking> getAll(){
