@@ -193,12 +193,23 @@ public class BookingController {
 	      booking.setToLocation(dropLocation);
 	      booking.setTripType(tripType);
 	      booking.setStartDate(localDate1);
-	      booking.setTime(localTime1);
+	      booking.setTime(time);
 	      booking.setDistance(distance);
 	      booking.setName(name);
 	      booking.setEmail(email);
 	      booking.setPhone(phone);
-	      booking.setUserid(userid);
+	      booking.setUserId(userid);
+		  booking.setUserDrop(dropLocation);
+		  booking.setUserPickup(pickupLocation);
+		  booking.setUserTripType(tripType);
+		  booking.setBookingType("website");
+		  booking.setDate(localDate1);
+		  booking.setCar(modelType);
+		  booking.setAmount(Integer.parseInt(price));
+		  booking.setGst(Integer.parseInt(gst));
+		  booking.setServiceCharge(Integer.parseInt(service));
+		  
+		
 	      System.out.println(tripType);
     	  System.out.println(returndate);
     	  System.out.println(name);
@@ -218,25 +229,25 @@ public class BookingController {
 
 	      String bookid = ser.getLastUsedBookingId();
 	      if (bookid == null) {
-	          bookid = "AIM0";
+	          bookid = "WTL0";
 	      } else {
 	        //   String numericPart = bookid.substring(4);
-			String numericPart = "100";
-
+			
 	          try {
 	              // Parse the numeric part to an integer and increment it
-	              int numericValue = Integer.parseInt(numericPart);
-	              numericValue++;
+	              long numericValue = System.currentTimeMillis();
+	              
 
 	              // Create the new bookid with the incremented numeric part
-	              bookid = "AIM" + numericValue;
+	              bookid = "WTL" + numericValue;
 	          } catch (NumberFormatException e) {
 	              // Handle the case where the numeric part is not a valid integer
-	              System.out.println("Invalid numeric part in bookid: " + numericPart);
+	              System.out.println("Invalid numeric part in bookid: ");
 	          }
 	      }
 
 	      booking.setBookingId(bookid);
+		  booking.setBookid(bookid);
 	      if (booking.getDistance() == null || booking.getDistance().equals("0")) {
 	          System.out.println("Distance not found");
 	        //   ResponseEntity.ok("Not Successful");
