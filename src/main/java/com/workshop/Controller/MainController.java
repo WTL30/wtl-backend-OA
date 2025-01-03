@@ -54,6 +54,66 @@ public class MainController {
 		return "error";
 	}
 
+	@GetMapping("/Osmanabad")
+	public String osmanabad() {
+		return "Osmanabad";
+	}
+
+	@GetMapping("/Washim")
+	public String washim() {
+		return "Washim";
+	}
+
+	@GetMapping("/Palghar")
+	public String palghar() {
+		return "Palghar";
+	}
+
+	@GetMapping("/Gondia")
+	public String gondia() {
+		return "Gondia";
+	}
+
+	@GetMapping("/Amravati")
+	public String amravati() {
+		return "Amravati";
+	}
+
+	@GetMapping("/Akola")
+	public String akola() {
+		return "Akola";
+	}
+
+	@GetMapping("/Latur")
+	public String latur() {
+		return "Latur";
+	}
+
+	@GetMapping("/Nanded")
+	public String nanded() {
+		return "Nanded";
+	}
+
+	@GetMapping("/Wardha")
+	public String wardha() {
+		return "Wardha";
+	}
+
+	@GetMapping("/Chandarpur")
+	public String chandarpur() {
+		return "Chandarpur";
+	}
+
+	@GetMapping("/Gadchiroli")
+	public String gadchiroli() {
+		return "Gadchiroli";
+	}
+
+	@GetMapping("/Aurangabad")
+	public String aurangabad() {
+		return "Aurangabad";
+	}
+
 	@GetMapping("/Mumbai")
 	public String mumbai() {
 		return "Mumbai";
@@ -99,9 +159,19 @@ public class MainController {
 		return "Ratnagiri";
 	}
 
-	@GetMapping("/Jalana")
+	@GetMapping("/Jalna")
 	public String jalana() {
 		return "Jalana";
+	}
+
+	@GetMapping("/Beed")
+	public String beed() {
+		return "Beed";
+	}
+
+	@GetMapping("/Sindhudurg")
+	public String sindhudurg() {
+		return "Sindhudurg";
 	}
 
 	@GetMapping("/Lonavala")
