@@ -54,6 +54,66 @@ public class MainController {
 		return "error";
 	}
 
+	@GetMapping("/Osmanabad")
+	public String osmanabad() {
+		return "Osmanabad";
+	}
+
+	@GetMapping("/Washim")
+	public String washim() {
+		return "Washim";
+	}
+
+	@GetMapping("/Palghar")
+	public String palghar() {
+		return "Palghar";
+	}
+
+	@GetMapping("/Gondia")
+	public String gondia() {
+		return "Gondia";
+	}
+
+	@GetMapping("/Amravati")
+	public String amravati() {
+		return "Amravati";
+	}
+
+	@GetMapping("/Akola")
+	public String akola() {
+		return "Akola";
+	}
+
+	@GetMapping("/Latur")
+	public String latur() {
+		return "Latur";
+	}
+
+	@GetMapping("/Nanded")
+	public String nanded() {
+		return "Nanded";
+	}
+
+	@GetMapping("/Wardha")
+	public String wardha() {
+		return "Wardha";
+	}
+
+	@GetMapping("/Chandarpur")
+	public String chandarpur() {
+		return "Chandarpur";
+	}
+
+	@GetMapping("/Gadchiroli")
+	public String gadchiroli() {
+		return "Gadchiroli";
+	}
+
+	@GetMapping("/Aurangabad")
+	public String aurangabad() {
+		return "Aurangabad";
+	}
+
 	@GetMapping("/Mumbai")
 	public String mumbai() {
 		return "Mumbai";
@@ -99,9 +159,19 @@ public class MainController {
 		return "Ratnagiri";
 	}
 
-	@GetMapping("/Jalana")
+	@GetMapping("/Jalna")
 	public String jalana() {
 		return "Jalana";
+	}
+
+	@GetMapping("/Beed")
+	public String beed() {
+		return "Beed";
+	}
+
+	@GetMapping("/Sindhudurg")
+	public String sindhudurg() {
+		return "Sindhudurg";
 	}
 
 	@GetMapping("/Lonavala")
@@ -256,33 +326,42 @@ public class MainController {
 
 	@GetMapping("/city/{name}")
 	public String citt(@PathVariable String name, Model model) {
-	//System.out.println(name);
-	List<City> cityinfo = cityser.findAll();
-	City city = cityser.findCityByName(name);
-	model.addAttribute("city",city);
-	model.addAttribute("cityinfo", cityinfo);
-	return "city1";
+		// System.out.println(name);
+		List<City> cityinfo = cityser.findAll();
+		City city = cityser.findCityByName(name);
+		System.out.println(city);
+		model.addAttribute("city", city);
+		model.addAttribute("cityinfo", cityinfo);
+		return "city";
 	}
 
 	// @GetMapping("/city/{name}")
 	// public String city(@PathVariable String name, Model model) {
-	// 	// List of cities
-	// 	List<String> cities = Arrays.asList(
-	// 			"Pune", "Mumbai", "Kolhapur", "Satara", "Nashik", "Ratnagiri",
-	// 			"Shirdi", "Ahmednagar", "Beed", "Jalna", "Lonavala", "Akola",
-	// 			"Sindhudurg", "Latur", "Osmanabad", "Nanded", "Washim", "Wardha",
-	// 			"Palghar", "Chandrapur", "Gondia", "Gadchiroli", "Amravati",
-	// 			"Aurangabad", "Bhandara", "Buldhana", "Dhule", "Hingoli", "Nagpur",
-	// 			"Parbhani", "Sangli", "Raigad", "Solapur", "Thane", "Yavatmal");
+	// // List of cities
+	// System.out.println(name);
+	// try {
+	// List<String> cities = Arrays.asList(
+	// "Pune", "Mumbai", "Kolhapur", "Satara", "Nashik", "Ratnagiri",
+	// "Shirdi", "Ahmednagar", "Beed", "Jalna", "Lonavala", "Akola",
+	// "Sindhudurg", "Latur", "Osmanabad", "Nanded", "Washim", "Wardha",
+	// "Palghar", "Chandrapur", "Gondia", "Gadchiroli", "Amravati",
+	// "Aurangabad", "Bhandara", "Buldhana", "Dhule", "Hingoli", "Nagpur",
+	// "Parbhani", "Sangli", "Raigad", "Solapur", "Thane", "Yavatmal");
 
-	// 	// Check if the city name exists in the list
-	// 	if (cities.contains(name)) {
-	// 		model.addAttribute("city", name);
-	// 		return name + ".html"; // Returns the dynamic HTML page based on city
-	// 	} else {
-	// 		// Return an error or fallback page
-	// 		return "cityNotFound.html"; // Optional: You can create a page for not found cities
-	// 	}
+	// // Check if the city name exists in the list
+
+	// if (cities.contains(name)) {
+	// model.addAttribute("city", name);
+	// return "Pune"; // Returns the dynamic HTML page based on city
+	// } else {
+	// // Return an error or fallback page
+	// return "Pune"; // Optional: You can create a page for not found cities
+	// }
+	// } catch (Exception e) {
+	// System.out.println("+++++++++++++++++++++"+e.getMessage());
+	// return "error ouccur in city" + e.getMessage();
+	// // TODO: handle exception
+	// }
 	// }
 
 	@GetMapping("/citytocity/{name}")

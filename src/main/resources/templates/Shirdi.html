@@ -29,13 +29,6 @@
             overflow: hidden;
             margin: 40px;
         }
-
-        .city-section {
-            background-color: #8ECAE6;
-            padding: 20px;
-            height: 250px;
-            position: relative;
-        }
         
           /* CSS for mobile view */
 .mobile-only {
@@ -49,6 +42,13 @@
   }
 }
 		 
+
+        .city-section {
+            background-color: #8ECAE6;
+            padding: 20px;
+            height: 250px;
+            position: relative;
+        }
        
 
         /* Styles for the city list */
@@ -325,50 +325,7 @@
                     <ul>
       
                       <li>
-                        <a th:href="@{/  <div class="row align-items-center" style="background-color: #f5f7fc;">
-    <div class="col-lg-8">
-      <div class="term-box footer-item" style="margin-top: 10px;">
-        <p class="copy__desc">
-          &copy; Copyright WTL 2023 Made with
-          <span class="la la-heart" style="color: red;"></span> by
-          <a href="https://www.cobaztech.com/">cobaztech</a>
-        </p>
-      </div>
-    </div>
-    <!-- end col-lg-8 -->
-    <div class="col-lg-4" style="text-align: right; padding: 10px;">
-      <div class="footer-social-box" style="display: inline-block;">
-        <ul class="social-profile" style="list-style: none; padding: 0; margin: 0; display: inline-flex; gap: 15px;">
-          <li style="display: inline;">
-            <a href="https://www.facebook.com/profile.php?id=61554946222967&mibextid=ZbWKwL" 
-               style="text-decoration: none; color: #3b5998; font-size: 20px; transition: color 0.3s ease;">
-              <i class="lab la-facebook-f"></i>
-            </a>
-          </li>
-          <li style="display: inline;">
-            <a href="https://x.com/world_trip_link" 
-               style="text-decoration: none; color: #1da1f2; font-size: 20px; transition: color 0.3s ease;">
-              <i class="lab la-twitter"></i>
-            </a>
-          </li>
-          <li style="display: inline;">
-            <a href="https://www.instagram.com/worldtriplink/" 
-               style="text-decoration: none; color: #e1306c; font-size: 20px; transition: color 0.3s ease;">
-              <i class="lab la-instagram"></i>
-            </a>
-          </li>
-          <li style="display: inline;">
-            <a href="https://www.linkedin.com/in/world-trip-link9562762a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" 
-               style="text-decoration: none; color: #0077b5; font-size: 20px; transition: color 0.3s ease;">
-              <i class="lab la-linkedin-in"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    
-    <!-- end col-lg-4 -->
-  </div>}"
+                        <a th:href="@{/getUserBooking}"
                           style=" border: 1px solid; padding: 5px; border-radius: 10px; background-color: #219ebc; color: #fff;">MyTrip
                           <i class="la la-shopping-bag"></i></a>
                         <div class="dropdown-menu-item mega-menu">
@@ -642,6 +599,7 @@
          END HEADER AREA
 ================================= -->
 <hr>
+
     <!-- ================================
     START HERO-WRAPPER AREA
 ================================= -->
@@ -3470,30 +3428,30 @@ END HOTEL AREA
   <div style="padding: 10px; border-radius: 5px; max-width: 300px;">
     <h5 class="text-dark" style="margin: 10px 0; margin-left: 15px; color: #333; font-size: 18px;">Popular Cities</h5>
     <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: auto; text-align: left; margin-left: 15px;">
-      <span><a th:href="@{city/Pune}">Pune</a></span>
-      <span><a th:href="@{city/Mumbai}">Mumbai</a></span>
-      <span><a th:href="@{city/Kolhapur}">Kolhapur</a></span>
-      <span><a th:href="@{city/Satara}">Satara</a></span>
-      <span><a th:href="@{city/Nashik}">Nashik</a></span>
-      <span><a th:href="@{city/Ratnagiri}">Ratnagiri</a></span>
-      <span><a th:href="@{city/Shirdi}">Shirdi</a></span>
-      <span><a th:href="@{city/Ahmednagar}">Ahmednagar</a></span>
-      <span><a th:href="@{city/Beed}">Beed</a></span>
-      <span><a th:href="@{city/Jalna}">Jalna</a></span>
-      <span><a th:href="@{city/Lonavala}">Lonavala</a></span>
-      <span><a th:href="@{city/Akola}">Akola</a></span>
-      <span><a th:href="@{city/Sindhudurg}">Sindhudurg</a></span>
-      <span><a th:href="@{city/Latur}">Latur</a></span>
-      <span><a th:href="@{city/Osmanabad}">Osmanabad</a></span>
-      <span><a th:href="@{city/Nanded}">Nanded</a></span>
-      <span><a th:href="@{city/Washim}">Washim</a></span>
-      <span><a th:href="@{city/Wardha}">Wardha</a></span>
-      <span><a th:href="@{city/Palghar}">Palghar</a></span>
-      <span><a th:href="@{city/Chandarpur}">Chandarpur</a></span>
-      <span><a th:href="@{city/Gondia}">Gondia</a></span>
-      <span><a th:href="@{city/Gadchiroli}">Gadchiroli</a></span>
-      <span><a th:href="@{city/Amravati}">Amravati</a></span>
-      <span><a th:href="@{city/Aurangabad}">Aurangabad</a></span>
+      <span><a th:href="@{/Pune}">Pune</a></span>
+      <span><a th:href="@{/Mumbai}">Mumbai</a></span>
+      <span><a th:href="@{/Kolhapur}">Kolhapur</a></span>
+      <span><a th:href="@{/Satara}">Satara</a></span>
+      <span><a th:href="@{/Nashik}">Nashik</a></span>
+      <span><a th:href="@{/Ratnagiri}">Ratnagiri</a></span>
+      <span><a th:href="@{/Shirdi}">Shirdi</a></span>
+      <span><a th:href="@{/Ahmednagar}">Ahmednagar</a></span>
+      <span><a th:href="@{/Sindhudurg}">Sindhudurg</a></span>
+      <span><a th:href="@{/Jalna}">Jalna</a></span>
+      <span><a th:href="@{/Lonavala}">Lonavala</a></span>
+      <span><a th:href="@{/Akola}">Akola</a></span>
+      <span><a th:href="@{/Sindhudurg}">Sindhudurg</a></span>
+      <span><a th:href="@{/Latur}">Latur</a></span>
+      <span><a th:href="@{/Osmanabad}">Osmanabad</a></span>
+      <span><a th:href="@{/Nanded}">Nanded</a></span>
+      <span><a th:href="@{/Washim}">Washim</a></span>
+      <span><a th:href="@{/Wardha}">Wardha</a></span>
+      <span><a th:href="@{/Palghar}">Palghar</a></span>
+      <span><a th:href="@{/Chandarpur}">Chandarpur</a></span>
+      <span><a th:href="@{/Gondia}">Gondia</a></span>
+      <span><a th:href="@{/Gadchiroli}">Gadchiroli</a></span>
+      <span><a th:href="@{/Amravati}">Amravati</a></span>
+      <span><a th:href="@{/Aurangabad}">Aurangabad</a></span>
     </div>
   </div>
 
@@ -3517,7 +3475,7 @@ END HOTEL AREA
     <h5 class="text-dark" style="margin: 10px 0;color: #333; font-size: 18px;">Airport Cabs</h5>
     <p style="margin-left: 15px; display: flex; flex-direction: column; gap: 10px;text-align: left;">
       <a th:href="@{/Airport}">Airport Cabs in Delhi</a>
-      <a th:href="@{/Airport3}">Airport Cabs in Pune</a>
+      <a th:href="@{/Airport1}">Airport Cabs in Pune</a>
       <a th:href="@{/Airport2}">Airport Cabs in Bangalore</a>
       <a th:href="@{/Airport3}">Airport Cabs in Mumbai</a>
       <a th:href="@{/Airport4}">Airport Cabs in Telangana</a>
@@ -3556,37 +3514,50 @@ END HOTEL AREA
   </div>
       
      
-        <div class="row align-items-center" style="background-color: #f5f7fc;">
-      <div class="col-lg-8">
-        <div class="term-box footer-item" style="margin-top: 10px;">
-          <p class="copy__desc">
-            &copy; Copyright WTL 2023 Made with
-            <span class="la la-heart"></span> by
-            <a href="https://www.cobaztech.com/">cobaztech</a>
-          </p>
-        </div>
+         <div class="row align-items-center" style="background-color: #f5f7fc;">
+    <div class="col-lg-8">
+      <div class="term-box footer-item" style="margin-top: 10px;">
+        <p class="copy__desc">
+          &copy; Copyright WTL 2023 Made with
+          <span class="la la-heart" style="color: red;"></span> by
+          <a href="https://www.cobaztech.com/">cobaztech</a>
+        </p>
       </div>
-      <!-- end col-lg-8 -->
-      <div class="col-lg-4">
-        <div class="footer-social-box text-right">
-          <ul class="social-profile">
-            <li>
-              <a href="https://www.facebook.com/profile.php?id=61554946222967&mibextid=ZbWKwL"><i class="lab la-facebook-f"></i></a>
-            </li>
-            <li>
-              <a href="https://x.com/world_trip_link"><i class="lab la-twitter"></i></a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/worldtriplink/"><i class="lab la-instagram"></i></a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/world-trip-link9562762a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="lab la-linkedin-in"></i></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <!-- end col-lg-4 -->
     </div>
+    <!-- end col-lg-8 -->
+    <div class="col-lg-4" style="text-align: right; padding: 10px;">
+      <div class="footer-social-box" style="display: inline-block;">
+        <ul class="social-profile" style="list-style: none; padding: 0; margin: 0; display: inline-flex; gap: 15px;">
+          <li style="display: inline;">
+            <a href="https://www.facebook.com/profile.php?id=61554946222967&mibextid=ZbWKwL" 
+               style="text-decoration: none; color: #3b5998; font-size: 20px; transition: color 0.3s ease;">
+              <i class="lab la-facebook-f"></i>
+            </a>
+          </li>
+          <li style="display: inline;">
+            <a href="https://x.com/world_trip_link" 
+               style="text-decoration: none; color: #1da1f2; font-size: 20px; transition: color 0.3s ease;">
+              <i class="lab la-twitter"></i>
+            </a>
+          </li>
+          <li style="display: inline;">
+            <a href="https://www.instagram.com/worldtriplink/" 
+               style="text-decoration: none; color: #e1306c; font-size: 20px; transition: color 0.3s ease;">
+              <i class="lab la-instagram"></i>
+            </a>
+          </li>
+          <li style="display: inline;">
+            <a href="https://www.linkedin.com/in/world-trip-link9562762a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" 
+               style="text-decoration: none; color: #0077b5; font-size: 20px; transition: color 0.3s ease;">
+              <i class="lab la-linkedin-in"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- end col-lg-4 -->
+  </div>
       
 
 
@@ -4009,4 +3980,4 @@ END HOTEL AREA
 
 
 </body>
-</html>  
+</html>
