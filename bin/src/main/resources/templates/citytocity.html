@@ -10,6 +10,16 @@
     <meta name="description" th:content="'Book a cab from ' + ${city1.city} + ' to ' + ${city2.city} + '. Explore seamless and cost-effective outstation cab booking services between ' + ${city1.city} + ' and ' + ${city2.city} + '. Enjoy the fastest service across major cities worldwide. Make your journeys safe, comfortable, and hassle-free with WorldTripLink\'s reliable cab services.'" />
     
   <title th:text="${city1.city + ' to ' + city2.city + ' Cab Booking'}"></title>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BBVFRQHTM9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BBVFRQHTM9');
+</script>
+
   
   <meta name="keywords" th:content="|car, taxi, cab, rental, outstation, one way, round trip, affordable fare cab, affordable rental car, airport transport, daily pickup drop, car rental service in ${city1.city} to ${city2.city}, ${city1.city} to ${city2.city} cab, ${city1.city} to ${city2.city} cab booking, ${city1.city} to ${city2.city} car booking, ${city1.city} to ${city2.city} cars, ${city1.city} to ${city2.city} cab service, ${city1.city} to ${city2.city} car rental, tours and travels in ${city1.city}, car booking in ${city1.city}, cab for outstation in ${city1.city}, outstation cab booking in ${city1.city}, outstation cab for ${city2.city} in ${city1.city}, cab booking service in ${city2.city}|"/>
   
@@ -3275,15 +3285,7 @@ END HOTEL AREA
     
        
            
-<div class="block">
-  <h5 class="text-primary" style="margin-top: 10px; margin-left: 15px;">Company Links</h5>
-  <p style="margin-left: 15px;">
-      <a th:href="@{/}">Home</a> |
-      <a th:href="@{/about}">About</a> |
-      <a th:href="@{/services}">Service</a> |
-      <a th:href="@{/contact}">Contact</a>
-  </p>
-</div>
+
 
 
 <h5 class="text-primary" style="margin-top: 10px; margin-left: 15px;">Popular Cities</h5>

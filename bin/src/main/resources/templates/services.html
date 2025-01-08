@@ -3,6 +3,16 @@
 
 <!-- Mirrored from techydevs.com/demos/trizen/html/services.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 29 Mar 2023 06:32:09 GMT -->
 <head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BBVFRQHTM9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BBVFRQHTM9');
+</script>
+
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="author" content="TechyDevs">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -222,7 +232,7 @@
         </div>
       </div>
       <div class="header-menu-wrapper padding-right-100px padding-left-100px">
-        <div class="container-fluid">
+       <div class="container-fluid">
           <div class="row">
             <div class="col-lg-12">
               <div class="menu-wrapper">
@@ -230,8 +240,8 @@
                   ><i class="la la-angle-down"></i
                 ></a>
                 <div class="logo">
-                  <a href="/"><img src="/images/wtl-logos.png" style="height: 70px;" alt=""><span
-                    style=" font-weight: bold; font-size: 30px; bottom: 900px; position: absolute; bottom: 20px; color: black;"></span></a>
+                  <a href="./index.html"><img src="/images/wtl-logos.png" style="height: 70px;" alt=""><span
+					                    style=" font-weight: bold; font-size: 30px; bottom: 900px; position: absolute; bottom: 20px; color: black;"></span></a>
                   <div class="menu-toggler">
                     <i class="la la-bars"></i>
                     <i class="la la-times"></i>
@@ -393,51 +403,22 @@
                           </ul> -->
                       </li>
                       <li>
+                        <a th:href="@{/about}"
+                          style=" border: 1px solid; padding: 5px; border-radius: 10px; background-color: #219ebc; color: #fff;">About</a>
+                      </li>
+                      <li>
+                        <a th:href="@{/services}"
+                          style=" border: 1px solid; padding: 5px; border-radius: 10px; background-color: #219ebc; color: #fff;">Service</a>
+                      </li>
+                      <li>
+                        <a th:href="@{/contact}"
+                          style=" border: 1px solid; padding: 5px; border-radius: 10px; background-color: #219ebc; color: #fff;">Contact</a>
+                      </li>
+                      <li>
                         <a th:href="@{/login}"
                           style=" border: 1px solid; padding: 5px; border-radius: 10px; background-color: #219ebc; color: #fff;">Login<i
                             ></i></a>
-                        <!-- <ul class="dropdown-menu-item">
-                            <li><a href="flight-grid.html">Flight grid</a></li>
-                            <li><a href="flight-list.html">Flight list</a></li>
-                            <li>
-                              <a href="flight-sidebar.html">Flight sidebar </a>
-                            </li>
-                            <li>
-                              <a href="flight-single.html">Flight details</a>
-                            </li>
-                            <li>
-                              <a href="flight-booking.html">Flight Booking</a>
-                            </li>
-                            <li>
-                              <a href="flight-search-result.html"
-                                >Flight Search Result</a
-                              >
-                            </li>
-                          </ul> -->
-                      </li>
-                      <li>
-                        <a th:href="@{/registration}"
-                          style=" border: 1px solid; padding: 5px; border-radius: 10px; background-color: #219ebc; color: #fff;">Sign Up<i
-                            ></i></a>
-                        <!-- <ul class="dropdown-menu-item">
-                            <li><a href="flight-grid.html">Flight grid</a></li>
-                            <li><a href="flight-list.html">Flight list</a></li>
-                            <li>
-                              <a href="flight-sidebar.html">Flight sidebar </a>
-                            </li>
-                            <li>
-                              <a href="flight-single.html">Flight details</a>
-                            </li>
-                            <li>
-                              <a href="flight-booking.html">Flight Booking</a>
-                            </li>
-                            <li>
-                              <a href="flight-search-result.html"
-                                >Flight Search Result</a
-                              >
-                            </li>
-                          </ul> -->
-                      </li>
+                      
                       <!-- <li>
                         
                         <a href="#">Login <i class="la la-angle-down"></i></a>
