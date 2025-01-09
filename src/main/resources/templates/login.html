@@ -7,17 +7,7 @@
     <meta name="author" content="TechyDevs" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="canonical" href="https://worldtriplink.com/"><title>WTL</title>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BBVFRQHTM9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-BBVFRQHTM9');
-</script>
-
+    <link rel="canonical" href="http://worldtriplink.com/"><title>WTL</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
@@ -307,7 +297,7 @@
                       </select> -->
                     </div>
                   </div>
-                  <!-- <div class="header-right-action">
+                  <div class="header-right-action">
                     <a
                       th:href="@{/registration}"
                      
@@ -320,7 +310,7 @@
                       
                       >Login</a
                     >
-                  </div> -->
+                  </div>
                 </div>
               </div>
             </div>
@@ -336,7 +326,7 @@
                   ><i class="la la-angle-down"></i
                 ></a>
                 <div class="logo">
-<a href="/"><img src="/images/wtl-logos.png"  style="height: 70px;" alt=""><span style=" font-weight: bold; font-size: 30px; bottom: 900px; position: absolute; bottom: 20px; color: black;"></span></a>                
+<a href="./"><img src="/images/wtl-logos.png"  style="height: 70px;" alt=""><span style=" font-weight: bold; font-size: 30px; bottom: 900px; position: absolute; bottom: 20px; color: black;"></span></a>                
                   <div class="menu-toggler">
                     <i class="la la-bars"></i>
                     <i class="la la-times"></i>
@@ -386,7 +376,7 @@
                           <li><a href="tour-details.html">Tour details</a></li>
                           <li><a href="tour-booking.html">Tour Booking</a></li>
                           <li>
-                            <a href=""
+                            <a href="tour-search-result.html"
                               >Tour Search Result</a
                             >
                           </li>
@@ -407,7 +397,7 @@
                             <a href="cruise-booking.html">Cruise Booking</a>
                           </li>
                           <li>
-                            <a href=""
+                            <a href="cruise-search-result.html"
                               >Cruise Search Result</a
                             >
                           </li>
@@ -483,7 +473,7 @@
                                 <li><a href="cart.html">Cart</a></li>
                                 <li><a href="checkout.html">Checkout</a></li>
                                 <li>
-                                  <a href="">recover password</a>
+                                  <a href="recover.html">recover password</a>
                                 </li>
                               </ul>
                             </li>
@@ -688,7 +678,7 @@
 
                         <p class="mb-2">Don't have an account? <a href="/" th:href="@{/registration}"
                                 class="link-info">Register here</a></p>
-                        <p>Forgot password? <a th:href="" class="link-info">Forgot password</a></p>
+                        <p>Forgot password? <a th:href="@{/forgot-pass}" class="link-info">Forgot password</a></p>
                     </form>
                 </div>
             </div>
@@ -887,7 +877,7 @@
                         <label for="rememberchb">Remember me</label>
                       </div>
                       <p class="forgot-password">
-                        <a href="">Forgot Password?</a>
+                        <a href="recover.html">Forgot Password?</a>
                       </p>
                     </div>
                   </div>

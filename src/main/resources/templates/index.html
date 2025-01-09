@@ -444,174 +444,31 @@
     </div>
     <div class="header-menu-wrapper padding-right-100px padding-left-100px">
       <div class="container-fluid">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="menu-wrapper">
-                <a href="#" class="down-button"
-                  ><i class="la la-angle-down"></i
-                ></a>
-                <div class="logo">
-                  <a href="./index.html"><img src="/images/wtl-logos.png" style="height: 70px;" alt=""><span
-					                    style=" font-weight: bold; font-size: 30px; bottom: 900px; position: absolute; bottom: 20px; color: black;"></span></a>
-                  <div class="menu-toggler">
-                    <i class="la la-bars"></i>
-                    <i class="la la-times"></i>
-                  </div>
-                  <!-- end menu-toggler -->
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="menu-wrapper">
+              <a href="#" class="down-button"><i class="la la-angle-down"></i></a>
+              <div class="logo" >
+                <a href="/"><img src="/images/wtl-logos.png" style="height: 70px;" alt=""><span
+                    style=" font-weight: bold; font-size: 30px; bottom: 900px; position: absolute; bottom: 20px; color: black;"></span></a>
+                <div class="menu-toggler">
+                  <i class="la la-bars"></i>
+                  <i class="la la-times"></i>
                 </div>
-                <!-- end logo -->
-                <div class="main-menu-content">
-                  <nav>
-                    <ul>
-      
+              </div>
+              <div class="main-menu-content">
+                <nav>
+                  <ul>
+
+                    <li>
+                      <a th:href="@{/getUserBooking}"
+                        style=" border: 1px solid; padding: 5px; border-radius: 10px; background-color: #219ebc; color: #fff;">MyTrip
+                        <i class="la la-shopping-bag"></i></a>
+                    </li>
+                    <th:block th:if="${!loggedIn}">
                       <li>
-                        <a th:href="@{/getUserBooking}"
-                          style=" border: 1px solid; padding: 5px; border-radius: 10px; background-color: #219ebc; color: #fff;">MyTrip
-                          <i class="la la-shopping-bag"></i></a>
-                        <div class="dropdown-menu-item mega-menu">
-                          <!-- <ul class="row no-gutters">
-                              <li class="col-lg-3 mega-menu-item">
-                                <ul>
-                                  <li><a href="add-hotel.html">add hotel </a></li>
-                                  <li>
-                                    <a href="add-flight.html">add flight </a>
-                                  </li>
-                                  <li><a href="add-tour.html">add tour </a></li>
-                                  <li>
-                                    <a href="add-cruise.html">add cruise </a>
-                                  </li>
-                                  <li><a href="add-car.html">add car</a></li>
-                                  <li>
-                                    <a href="user-dashboard.html"
-                                      >User Dashboard</a
-                                    >
-                                  </li>
-                                  <li>
-                                    <a href="admin-dashboard.html"
-                                      >Admin Dashboard</a
-                                    >
-                                  </li>
-                                  <li><a href="career.html">career</a></li>
-                                  <li>
-                                    <a href="route-map.html"
-                                      >route map<span
-                                        class="badge bg-2 text-white"
-                                        >New</span
-                                      ></a
-                                    >
-                                  </li>
-                                </ul>
-                              </li>
-                              <li class="col-lg-3 mega-menu-item">
-                                <ul>
-                                  <li>
-                                    <a href="route.html"
-                                      >route<span class="badge bg-2 text-white"
-                                        >New</span
-                                      ></a
-                                    >
-                                  </li>
-                                  <li>
-                                    <a href="route-destination.html"
-                                      >route destination<span
-                                        class="badge bg-2 text-white"
-                                        >New</span
-                                      ></a
-                                    >
-                                  </li>
-                                  <li>
-                                    <a href="career-details.html"
-                                      >career details</a
-                                    >
-                                  </li>
-                                  <li>
-                                    <a href="user-profile.html">User profile</a>
-                                  </li>
-                                  <li>
-                                    <a href="become-local-expert.html"
-                                      >Become Local Expert</a
-                                    >
-                                  </li>
-                                  <li><a href="contact.html">contact</a></li>
-                                  <li><a href="cart.html">Cart</a></li>
-                                  <li><a href="checkout.html">Checkout</a></li>
-                                  <li>
-                                    <a href="">recover password</a>
-                                  </li>
-                                </ul>
-                              </li>
-                              <li class="col-lg-3 mega-menu-item">
-                                <ul>
-                                  <li>
-                                    <a href="payment-received.html"
-                                      >payment received</a
-                                    >
-                                  </li>
-                                  <li>
-                                    <a href="payment-complete.html"
-                                      >payment complete</a
-                                    >
-                                  </li>
-                                  <li>
-                                    <a href="destinations.html">Destinations</a>
-                                  </li>
-                                  <li><a href="about.html">about</a></li>
-                                  <li>
-                                    <a href="services.html">Our Services</a>
-                                  </li>
-                                  <li><a href="gallery.html">Gallery</a></li>
-                                  <li><a href="pricing.html">pricing</a></li>
-                                  <li><a href="faq.html">faq</a></li>
-                                  <li>
-                                    <a href="add-new-post.html">add new post</a>
-                                  </li>
-                                </ul>
-                              </li>
-                              <li class="col-lg-3 mega-menu-item">
-                                <ul>
-                                  <li>
-                                    <a href="blog-full-width.html"
-                                      >blog full width</a
-                                    >
-                                  </li>
-                                  <li><a href="blog-grid.html">blog grid</a></li>
-                                  <li>
-                                    <a href="blog-sidebar.html">blog sidebar</a>
-                                  </li>
-                                  <li>
-                                    <a href="blog-single.html">blog details</a>
-                                  </li>
-                                  <li>
-                                    <a href="coming-soon.html">Coming Soon</a>
-                                  </li>
-                                  <li><a href="page-404.html">404 page</a></li>
-                                </ul>
-                              </li>
-                            </ul> -->
-                        </div>
-                      </li>
-                      <li>
-                        <a th:href="@{/}"
-                          style=" border: 1px solid; padding: 5px; border-radius: 10px; background-color: #219ebc; color: #fff;">Home<i
-                            class="la la-home"></i></a>
-                        <!-- <ul class="dropdown-menu-item">
-                            <li><a href="flight-grid.html">Flight grid</a></li>
-                            <li><a href="flight-list.html">Flight list</a></li>
-                            <li>
-                              <a href="flight-sidebar.html">Flight sidebar </a>
-                            </li>
-                            <li>
-                              <a href="flight-single.html">Flight details</a>
-                            </li>
-                            <li>
-                              <a href="flight-booking.html">Flight Booking</a>
-                            </li>
-                            <li>
-                              <a href="flight-search-result.html"
-                                >Flight Search Result</a
-                              >
-                            </li>
-                          </ul> -->
+                        <a th:href="@{/login}"
+                          style=" border: 1px solid; padding: 5px; border-radius: 10px; background-color: #219ebc; color: #fff;">Login<i></i></a>
                       </li>
                       <li>
                         <a th:href="@{/about}"
@@ -626,82 +483,37 @@
                           style=" border: 1px solid; padding: 5px; border-radius: 10px; background-color: #219ebc; color: #fff;">Contact</a>
                       </li>
                       <li>
-                        <a th:href="@{/login}"
-                          style=" border: 1px solid; padding: 5px; border-radius: 10px; background-color: #219ebc; color: #fff;">Login<i
-                            ></i></a>
+                        <a th:href="@{/registration}"
+                          style=" border: 1px solid; padding: 5px; border-radius: 10px; background-color: #219ebc; color: #fff;">Sign Up<i></i></a>
+                    </th:block>
+                    <th:block th:if="${loggedIn}">
                       
-                      <!-- <li>
-                        
-                        <a href="#">Login <i class="la la-angle-down"></i></a>
-                        <ul class="dropdown-menu-item">
-                          <li><a href="hotel-grid.html">Hotel grid</a></li>
-                          <li><a href="hotel-list.html">Hotel list</a></li>
-                          <li>
-                            <a href="hotel-sidebar.html">Hotel sidebar </a>
-                          </li>
-                          <li><a href="hotel-single.html">Hotel details</a></li>
-                          <li>
-                            <a href="hotel-booking.html">Hotel Booking</a>
-                          </li>
-                          <li>
-                            <a href="hotel-search-result.html"
-                              >Hotel Search Result</a
-                            >
-                          </li>
-                          <li>
-                            <a href="#">Rooms <i class="la la-plus"></i></a>
-                            <ul class="sub-menu">
-                              <li><a href="room-list.html">Room List</a></li>
-                              <li><a href="room-grid.html">Room Grid</a></li>
-                              <li>
-                                <a href="room-search-result.html"
-                                  >Search Result</a
-                                >
-                              </li>
-                              <li>
-                                <a href="room-search-result-list.html"
-                                  >Search Result list</a
-                                >
-                              </li>
-                              <li>
-                                <a href="room-details.html">Room Details</a>
-                              </li>
-                            </ul>
-                          </li>
-                        </ul>
+                        <li>
+                          <a th:href="@{/about}"
+                            style=" border: 1px solid; padding: 5px; border-radius: 10px; background-color: #219ebc; color: #fff;">About</a>
+                        </li>
+                        <li>
+                          <a th:href="@{/services}"
+                            style=" border: 1px solid; padding: 5px; border-radius: 10px; background-color: #219ebc; color: #fff;">Service</a>
+                        </li>
+                        <li>
+                          <a th:href="@{/contact}"
+                            style=" border: 1px solid; padding: 5px; border-radius: 10px; background-color: #219ebc; color: #fff;">Contact</a>
+                        </li>
+                        <span th:text="${username}" style="color: red;"></span>
                       </li>
-                      <li> -->
-                        <!-- <a href="#">Register <i class="la la-angle-down"></i></a> -->
-                        <!-- <ul class="dropdown-menu-item">
-                          <li><a href="car-grid.html">car grid</a></li>
-                          <li><a href="car-list.html">car list</a></li>
-                          <li><a href="car-sidebar.html">car sidebar </a></li>
-                          <li><a href="car-single.html">car details</a></li>
-                          <li><a href="car-booking.html">Car Booking</a></li>
-                          <li>
-                            <a href="car-search-result.html"
-                              >Car Search Result</a
-                            >
-                          </li>
-                        </ul> -->
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
-                <!-- end main-menu-content -->
-                <!-- <div class="nav-btn">
-                  <a href="become-local-expert.html" class="theme-btn"
-                    >Become Local Expert</a
-                  >
-                </div> -->
-                <!-- end nav-btn -->
+                      <li>
+                        <a th:href="@{/logout}"
+                          style=" border: 1px solid black; padding: 5px; border-radius: 10px; background-color:transparent; color: black;">Logout<i></i></a>
+                      <li>
+                    </th:block>
+                  </ul>
+                </nav>
               </div>
-              <!-- end menu-wrapper -->
             </div>
-            <!-- end col-lg-12 -->
           </div>
-          <!-- end row -->
         </div>
+      </div>
   </header>
   <!-- ================================
          END HEADER AREA
@@ -3278,7 +3090,7 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="section-heading text-center">
-            <h2 class="sec__title">Book Your Cab Now!</h2>
+            <h1 class="sec__title">Book Your Cab Now!</h1>
           </div>
           <!-- end section-heading -->
         </div>
@@ -4135,6 +3947,8 @@
     
 ================================= -->
 
+
+
 <style>
    
   .responsive-flex {
@@ -4250,7 +4064,8 @@
   </div>
 
 
-  <div class="row align-items-center" style="background-color: #f5f7fc;">
+  <div  style="background-color: #f5f7fc;">
+    <div class="row align-items-center justify-content-arround">
     <div class="col-lg-8">
       <div class="term-box footer-item" style="margin-top: 10px;">
         <p class="copy__desc">
@@ -4260,9 +4075,14 @@
         </p>
       </div>
     </div>
+    <div>
+     <a class="text-black" href="/privacy-policy">Privacy And Policy</a> 
+    </div>
+  </div>
     <!-- end col-lg-8 -->
-    <div class="col-lg-4" style="text-align: right; padding: 10px;">
-      <div class="footer-social-box" style="display: inline-block;">
+     <div style="display: flex; justify-content: center; align-items: center; padding-left: 20%;">
+    <div class="col-lg-4" >
+      <div class="footer-social-box" >
         <ul class="social-profile" style="list-style: none; padding: 0; margin: 0; display: inline-flex; gap: 15px;">
           <li style="display: inline;">
             <a href="https://www.facebook.com/profile.php?id=61554946222967&mibextid=ZbWKwL" 
@@ -4291,6 +4111,7 @@
         </ul>
       </div>
     </div>
+  </div>
     
     <!-- end col-lg-4 -->
   </div>
@@ -4305,6 +4126,7 @@
     <i class="la la-angle-up" title="Go top"></i>
   </div>
   <!-- end back-to-top -->
+
   <!-- end modal-shared -->
   <div class="modal-popup">
     <div class="modal fade" id="signupPopupForm" tabindex="-1" role="dialog" aria-hidden="true">

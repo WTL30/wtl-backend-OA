@@ -396,5 +396,5 @@ public class MainController {
 		// model.addAttribute("cityinfo", cityinfo);
 		return "state";
 	}
-
+	
 }
