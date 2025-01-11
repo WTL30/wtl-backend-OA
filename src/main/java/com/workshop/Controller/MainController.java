@@ -396,5 +396,13 @@ public class MainController {
 		// model.addAttribute("cityinfo", cityinfo);
 		return "state";
 	}
+	@Controller
+public class PrivacyPolicyController {
+
+    @GetMapping("/privacy-policy")
+    public String showPrivacyPolicy() {
+        return "privacy-policy"; // This corresponds to a view (e.g., `privacy-policy.html` or `privacy-policy.jsp`).
+    }
+}
 	
 }

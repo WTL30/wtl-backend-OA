@@ -7,17 +7,7 @@
     <meta name="author" content="TechyDevs" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="canonical" href="https://worldtriplink.com/"><title>WTL</title>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BBVFRQHTM9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-BBVFRQHTM9');
-</script>
-
+    <link rel="canonical" href="http://worldtriplink.com/"><title>WTL</title>
     <!-- Favicon -->
     <link rel="icon" href="images/favicon.png" />
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCelDo4I5cPQ72TfCTQW-arhPZ7ALNcp8w&libraries=places"></script>
@@ -147,57 +137,341 @@
  <!-- ================================
             START HEADER AREA
 ================================= -->
-     <header class="header-area dispaly-flex">
-    <div class="header-top-bar padding-right-100px padding-left-100px">
-      <div class="container-fluid">
-        <div class="row align-items-center">
-          <div class="col-lg-6">
-            <div class="header-top-content">
-              <div class="header-right d-flex align-items-center justify-content-end">
-                <div class="header-right-action">
+    <header class="header-area">
+      <div class="header-top-bar padding-right-100px padding-left-100px">
+        <div class="container-fluid">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <div class="header-top-content">
+                <div class="header-left">
+                  <ul class="list-items">
+                    <!-- <li>
+                      <a href="#"
+                        ><i class="la la-phone mr-1"></i>(123) 123-456</a
+                      >
+                    </li> -->
+                    <!-- <li>
+                      <a href="#"
+                        ><i class="la la-envelope mr-1"></i
+                        >trizen@example.com</a
+                      >
+                    </li> -->
+                  </ul>
                 </div>
-                <div class="header-right-action">
-                  <a th:href="@{/registration}" data-target="#signupPopupForm" class="mobile-only"
-                    style="border: 1px solid #000; padding: 10px;">Sign Up</a>
-                  <!-- <a th:href="@{/login}" class="theme-btn theme-btn-small mobile-only" style="border: 1px solid #000; padding: 2px; background-color: #fff; width: 80px;">Login</a> -->
-                  <th:block th:if="${!loggedIn}">
-                    <a th:href="@{/login}" data-target="#signupPopupForm" class="mobile-only"
-                      style="border: 1px solid #000; padding: 10px;">Login</a>
-                  </th:block>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="header-top-content">
+                <div
+                  class="header-right d-flex align-items-center justify-content-end"
+                >
+                  <div class="header-right-action">
+                    <div class="select-contain select--contain w-auto">
+                      <!-- <select class="select-contain-select">
+                        <option
+                          data-content='<span class="flag-icon flag-icon-id mr-1"></span> Bahasa Indonesia'
+                        >
+                          Bahasa Indonesia
+                        </option>
+                        <option
+                          data-content='<span class="flag-icon flag-icon-de mr-1"></span> Deutsch'
+                        >
+                          Deutsch
+                        </option>
+                        <option
+                          data-content='<span class="flag-icon flag-icon-us mr-1"></span> English(US)'
+                          selected
+                        >
+                          English US
+                        </option>
+                        <option
+                          data-content='<span class="flag-icon flag-icon-gb-eng mr-1"></span> English(UK)'
+                        >
+                          English UK
+                        </option>
+                        <option
+                          data-content='<span class="flag-icon flag-icon-ro mr-1"></span> Romanian'
+                        >
+                          Romanian
+                        </option>
+                        <option
+                          data-content='<span class="flag-icon flag-icon-es mr-1"></span> Español'
+                        >
+                          Español
+                        </option>
+                        <option
+                          data-content='<span class="flag-icon flag-icon-fr mr-1"></span> Francais'
+                        >
+                          Francais
+                        </option>
+                        <option
+                          data-content='<span class="flag-icon flag-icon-it mr-1"></span> Italiano'
+                        >
+                          Italiano
+                        </option>
+                        <option
+                          data-content='<span class="flag-icon flag-icon-pl mr-1"></span> Polski'
+                        >
+                          Polski
+                        </option>
+                        <option
+                          data-content='<span class="flag-icon flag-icon-pt mr-1"></span> Portuguese'
+                        >
+                          Portuguese
+                        </option>
+                        <option
+                          data-content='<span class="flag-icon flag-icon-tr mr-1"></span> Turkish'
+                        >
+                          Turkish
+                        </option>
+                        <option
+                          data-content='<span class="flag-icon flag-icon-ru mr-1"></span> Russian'
+                        >
+                          Russian
+                        </option>
+                        <option
+                          data-content='<span class="flag-icon flag-icon-jp mr-1"></span> Japanese'
+                        >
+                          Japanese
+                        </option>
+                        <option
+                          data-content='<span class="flag-icon flag-icon-cn mr-1"></span> Mandarin'
+                        >
+                          Mandarin
+                        </option>
+                        <option
+                          data-content='<span class="flag-icon flag-icon-tw mr-1"></span> Mandarin Chinese'
+                        >
+                          Mandarin Chinese
+                        </option>
+                        <option
+                          data-content='<span class="flag-icon flag-icon-kr mr-1"></span> Korean'
+                        >
+                          Korean
+                        </option>
+                        <option
+                          data-content='<span class="flag-icon flag-icon-in mr-1"></span> Hindi'
+                        >
+                          Hindi
+                        </option>
+                      </select> -->
+                    </div>
+                  </div>
+                  <div class="header-right-action">
+                    <div class="select-contain select--contain w-auto">
+                      <!-- <select class="select-contain-select">
+                        <option value="1">AED</option>
+                        <option value="2">AUD</option>
+                        <option value="3">BRL</option>
+                        <option value="4">CAD</option>
+                        <option value="5">CHF</option>
+                        <option value="6">CNY</option>
+                        <option value="7">EUR</option>
+                        <option value="8">GBP</option>
+                        <option value="9">HKD</option>
+                        <option value="10">IDR</option>
+                        <option value="11">INR</option>
+                        <option value="12">JPY</option>
+                        <option value="13">KRW</option>
+                        <option value="14">MYR</option>
+                        <option value="15">NZD</option>
+                        <option value="16">PHP</option>
+                        <option value="17">PLN</option>
+                        <option value="18">RUB</option>
+                        <option value="19">SAR</option>
+                        <option value="20">SGD</option>
+                        <option value="21">THB</option>
+                        <option value="22">TRY</option>
+                        <option value="23">TWD</option>
+                        <option value="24" selected>USD</option>
+                        <option value="25">VND</option>
+                        <option value="26">MXN</option>
+                        <option value="27">ARS</option>
+                        <option value="28">INR</option>
+                      </select> -->
+                    </div>
+                  </div>
+                  <div class="header-right-action">
+                    <a th:href="@{/registration}" data-target="#signupPopupForm" class="mobile-only" style="border: 1px solid #000; padding: 10px;">Sign Up</a>
+                         <!-- <a th:href="@{/login}" class="theme-btn theme-btn-small mobile-only" style="border: 1px solid #000; padding: 2px; background-color: #fff; width: 80px;">Login</a> -->
+                         <a th:href="@{/login}" data-target="#signupPopupForm" class="mobile-only" style="border: 1px solid #000; padding: 10px;">Login</a>
+  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="header-menu-wrapper padding-right-100px padding-left-100px">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="menu-wrapper">
-              <a href="#" class="down-button"><i class="la la-angle-down"></i></a>
-              <div class="logo" >
-                <a href="/"><img src="/images/wtl-logos.png" style="height: 70px;" alt=""><span
-                    style=" font-weight: bold; font-size: 30px; bottom: 900px; position: absolute; bottom: 20px; color: black;"></span></a>
-                <div class="menu-toggler">
-                  <i class="la la-bars"></i>
-                  <i class="la la-times"></i>
+      <div class="header-menu-wrapper padding-right-100px padding-left-100px">
+       <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="menu-wrapper">
+                <a href="#" class="down-button"
+                  ><i class="la la-angle-down"></i
+                ></a>
+                <div class="logo">
+                  <a href="./index.html"><img src="/images/wtl-logos.png" style="height: 70px;" alt=""><span
+					                    style=" font-weight: bold; font-size: 30px; bottom: 900px; position: absolute; bottom: 20px; color: black;"></span></a>
+                  <div class="menu-toggler">
+                    <i class="la la-bars"></i>
+                    <i class="la la-times"></i>
+                  </div>
+                  <!-- end menu-toggler -->
                 </div>
-              </div>
-              <div class="main-menu-content">
-                <nav>
-                  <ul>
-
-                    <li>
-                      <a th:href="@{/getUserBooking}"
-                        style=" border: 1px solid; padding: 5px; border-radius: 10px; background-color: #219ebc; color: #fff;">MyTrip
-                        <i class="la la-shopping-bag"></i></a>
-                    </li>
-                    <th:block th:if="${!loggedIn}">
+                <!-- end logo -->
+                <div class="main-menu-content">
+                  <nav>
+                    <ul>
+      
                       <li>
-                        <a th:href="@{/login}"
-                          style=" border: 1px solid; padding: 5px; border-radius: 10px; background-color: #219ebc; color: #fff;">Login<i></i></a>
+                        <a th:href="@{/getUserBooking}"
+                          style=" border: 1px solid; padding: 5px; border-radius: 10px; background-color: #219ebc; color: #fff;">MyTrip
+                          <i class="la la-shopping-bag"></i></a>
+                        <div class="dropdown-menu-item mega-menu">
+                          <!-- <ul class="row no-gutters">
+                              <li class="col-lg-3 mega-menu-item">
+                                <ul>
+                                  <li><a href="add-hotel.html">add hotel </a></li>
+                                  <li>
+                                    <a href="add-flight.html">add flight </a>
+                                  </li>
+                                  <li><a href="add-tour.html">add tour </a></li>
+                                  <li>
+                                    <a href="add-cruise.html">add cruise </a>
+                                  </li>
+                                  <li><a href="add-car.html">add car</a></li>
+                                  <li>
+                                    <a href="user-dashboard.html"
+                                      >User Dashboard</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a href="admin-dashboard.html"
+                                      >Admin Dashboard</a
+                                    >
+                                  </li>
+                                  <li><a href="career.html">career</a></li>
+                                  <li>
+                                    <a href="route-map.html"
+                                      >route map<span
+                                        class="badge bg-2 text-white"
+                                        >New</span
+                                      ></a
+                                    >
+                                  </li>
+                                </ul>
+                              </li>
+                              <li class="col-lg-3 mega-menu-item">
+                                <ul>
+                                  <li>
+                                    <a href="route.html"
+                                      >route<span class="badge bg-2 text-white"
+                                        >New</span
+                                      ></a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a href="route-destination.html"
+                                      >route destination<span
+                                        class="badge bg-2 text-white"
+                                        >New</span
+                                      ></a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a href="career-details.html"
+                                      >career details</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a href="user-profile.html">User profile</a>
+                                  </li>
+                                  <li>
+                                    <a href="become-local-expert.html"
+                                      >Become Local Expert</a
+                                    >
+                                  </li>
+                                  <li><a href="contact.html">contact</a></li>
+                                  <li><a href="cart.html">Cart</a></li>
+                                  <li><a href="checkout.html">Checkout</a></li>
+                                  <li>
+                                    <a href="">recover password</a>
+                                  </li>
+                                </ul>
+                              </li>
+                              <li class="col-lg-3 mega-menu-item">
+                                <ul>
+                                  <li>
+                                    <a href="payment-received.html"
+                                      >payment received</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a href="payment-complete.html"
+                                      >payment complete</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a href="destinations.html">Destinations</a>
+                                  </li>
+                                  <li><a href="about.html">about</a></li>
+                                  <li>
+                                    <a href="services.html">Our Services</a>
+                                  </li>
+                                  <li><a href="gallery.html">Gallery</a></li>
+                                  <li><a href="pricing.html">pricing</a></li>
+                                  <li><a href="faq.html">faq</a></li>
+                                  <li>
+                                    <a href="add-new-post.html">add new post</a>
+                                  </li>
+                                </ul>
+                              </li>
+                              <li class="col-lg-3 mega-menu-item">
+                                <ul>
+                                  <li>
+                                    <a href="blog-full-width.html"
+                                      >blog full width</a
+                                    >
+                                  </li>
+                                  <li><a href="blog-grid.html">blog grid</a></li>
+                                  <li>
+                                    <a href="blog-sidebar.html">blog sidebar</a>
+                                  </li>
+                                  <li>
+                                    <a href="blog-single.html">blog details</a>
+                                  </li>
+                                  <li>
+                                    <a href="coming-soon.html">Coming Soon</a>
+                                  </li>
+                                  <li><a href="page-404.html">404 page</a></li>
+                                </ul>
+                              </li>
+                            </ul> -->
+                        </div>
+                      </li>
+                      <li>
+                        <a th:href="@{/}"
+                          style=" border: 1px solid; padding: 5px; border-radius: 10px; background-color: #219ebc; color: #fff;">Home<i
+                            class="la la-home"></i></a>
+                        <!-- <ul class="dropdown-menu-item">
+                            <li><a href="flight-grid.html">Flight grid</a></li>
+                            <li><a href="flight-list.html">Flight list</a></li>
+                            <li>
+                              <a href="flight-sidebar.html">Flight sidebar </a>
+                            </li>
+                            <li>
+                              <a href="flight-single.html">Flight details</a>
+                            </li>
+                            <li>
+                              <a href="flight-booking.html">Flight Booking</a>
+                            </li>
+                            <li>
+                              <a href="flight-search-result.html"
+                                >Flight Search Result</a
+                              >
+                            </li>
+                          </ul> -->
                       </li>
                       <li>
                         <a th:href="@{/about}"
@@ -212,38 +486,86 @@
                           style=" border: 1px solid; padding: 5px; border-radius: 10px; background-color: #219ebc; color: #fff;">Contact</a>
                       </li>
                       <li>
-                        <a th:href="@{/registration}"
-                          style=" border: 1px solid; padding: 5px; border-radius: 10px; background-color: #219ebc; color: #fff;">Sign Up<i></i></a>
-                    </th:block>
-                    <th:block th:if="${loggedIn}">
+                        <a th:href="@{/login}"
+                          style=" border: 1px solid; padding: 5px; border-radius: 10px; background-color: #219ebc; color: #fff;">Login<i
+                            ></i></a>
                       
-                        <li>
-                          <a th:href="@{/about}"
-                            style=" border: 1px solid; padding: 5px; border-radius: 10px; background-color: #219ebc; color: #fff;">About</a>
-                        </li>
-                        <li>
-                          <a th:href="@{/services}"
-                            style=" border: 1px solid; padding: 5px; border-radius: 10px; background-color: #219ebc; color: #fff;">Service</a>
-                        </li>
-                        <li>
-                          <a th:href="@{/contact}"
-                            style=" border: 1px solid; padding: 5px; border-radius: 10px; background-color: #219ebc; color: #fff;">Contact</a>
-                        </li>
-                        <span th:text="${username}" style="color: red;"></span>
+                      <!-- <li>
+                        
+                        <a href="#">Login <i class="la la-angle-down"></i></a>
+                        <ul class="dropdown-menu-item">
+                          <li><a href="hotel-grid.html">Hotel grid</a></li>
+                          <li><a href="hotel-list.html">Hotel list</a></li>
+                          <li>
+                            <a href="hotel-sidebar.html">Hotel sidebar </a>
+                          </li>
+                          <li><a href="hotel-single.html">Hotel details</a></li>
+                          <li>
+                            <a href="hotel-booking.html">Hotel Booking</a>
+                          </li>
+                          <li>
+                            <a href="hotel-search-result.html"
+                              >Hotel Search Result</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#">Rooms <i class="la la-plus"></i></a>
+                            <ul class="sub-menu">
+                              <li><a href="room-list.html">Room List</a></li>
+                              <li><a href="room-grid.html">Room Grid</a></li>
+                              <li>
+                                <a href="room-search-result.html"
+                                  >Search Result</a
+                                >
+                              </li>
+                              <li>
+                                <a href="room-search-result-list.html"
+                                  >Search Result list</a
+                                >
+                              </li>
+                              <li>
+                                <a href="room-details.html">Room Details</a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
                       </li>
-                      <li>
-                        <a th:href="@{/logout}"
-                          style=" border: 1px solid black; padding: 5px; border-radius: 10px; background-color:transparent; color: black;">Logout<i></i></a>
-                      <li>
-                    </th:block>
-                  </ul>
-                </nav>
+                      <li> -->
+                        <!-- <a href="#">Register <i class="la la-angle-down"></i></a> -->
+                        <!-- <ul class="dropdown-menu-item">
+                          <li><a href="car-grid.html">car grid</a></li>
+                          <li><a href="car-list.html">car list</a></li>
+                          <li><a href="car-sidebar.html">car sidebar </a></li>
+                          <li><a href="car-single.html">car details</a></li>
+                          <li><a href="car-booking.html">Car Booking</a></li>
+                          <li>
+                            <a href="car-search-result.html"
+                              >Car Search Result</a
+                            >
+                          </li>
+                        </ul> -->
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+                <!-- end main-menu-content -->
+                <!-- <div class="nav-btn">
+                  <a href="become-local-expert.html" class="theme-btn"
+                    >Become Local Expert</a
+                  >
+                </div> -->
+                <!-- end nav-btn -->
               </div>
+              <!-- end menu-wrapper -->
             </div>
+            <!-- end col-lg-12 -->
           </div>
+          <!-- end row -->
         </div>
+        <!-- end container-fluid -->
       </div>
-  </header>
+      <!-- end header-menu-wrapper -->
+    </header>
     <!-- ================================
          END HEADER AREA
 ================================= -->
@@ -2519,7 +2841,7 @@
                     </form>
                   </div>
                   <div class="btn-box">
-                    <a href="" class="theme-btn"
+                    <a href="cruise-search-result.html" class="theme-btn"
                       >Search Now</a
                     >
                   </div>
@@ -2641,7 +2963,7 @@
                     </div>
                   </div>
                   <div class="btn-box pt-3">
-                    <a href="" class="theme-btn"
+                    <a href="tour-search-result.html" class="theme-btn"
                       >Search Now</a
                     >
                   </div>
@@ -2676,7 +2998,7 @@
     <div class="row">
       <div class="col-lg-12">
         <div class="section-heading text-center">
-          <h1 class="sec__title">Corporate Cabs in Surat</h1>
+          <h2 class="sec__title">Corporate Cabs in Surat</h2>
         </div>
       <br>
 
@@ -2761,7 +3083,18 @@ class="hotel-area section-bg section-padding overflow-hidden padding-right-100px
                 <span class="review__text">Average</span>
                 <span class="rating__text">(30 Reviews)</span>
               </div> -->
-              
+              <div
+                class="card-price d-flex align-items-center justify-content-between"
+              >
+                <!-- <p>
+                  <span class="price__from">From</span>
+                  <span class="price__num">$88.00</span>
+                  <span class="price__text">Per night</span>
+                </p> -->
+                <a href="./" class="btn-text"
+                  >See details<i class="la la-angle-right"></i
+                ></a>
+              </div>
             </div>
           </div>
           <!-- end card-item -->
@@ -2791,7 +3124,18 @@ class="hotel-area section-bg section-padding overflow-hidden padding-right-100px
                 <span class="review__text">Average</span>
                 <span class="rating__text">(30 Reviews)</span>
               </div> -->
-              
+              <div
+                class="card-price d-flex align-items-center justify-content-between"
+              >
+                <!-- <p>
+                  <span class="price__from">From</span>
+                  <span class="price__num">$58.00</span>
+                  <span class="price__text">Per night</span>
+                </p> -->
+                <a href="./" class="btn-text"
+                  >See details<i class="la la-angle-right"></i
+                ></a>
+              </div>
             </div>
           </div>
           <!-- end card-item -->
@@ -2822,7 +3166,18 @@ class="hotel-area section-bg section-padding overflow-hidden padding-right-100px
                 <span class="review__text">Average</span>
                 <span class="rating__text">(30 Reviews)</span>
               </div> -->
-              
+              <div
+                class="card-price d-flex align-items-center justify-content-between"
+              >
+                <!-- <p>
+                  <span class="price__from">From</span>
+                  <span class="price__num">$88.00</span>
+                  <span class="price__text">Per night</span>
+                </p> -->
+                <a href="./" class="btn-text"
+                  >See details<i class="la la-angle-right"></i
+                ></a>
+              </div>
             </div>
           </div>
           <!-- end card-item -->
@@ -2853,7 +3208,18 @@ class="hotel-area section-bg section-padding overflow-hidden padding-right-100px
                 <span class="review__text">Average</span>
                 <span class="rating__text">(30 Reviews)</span>
               </div> -->
-              
+              <div
+                class="card-price d-flex align-items-center justify-content-between"
+              >
+                <!-- <p>
+                  <span class="price__from">From</span>
+                  <span class="price__num">$88.00</span>
+                  <span class="price__text">Per night</span>
+                </p> -->
+                <a href="./" class="btn-text"
+                  >See details<i class="la la-angle-right"></i
+                ></a>
+              </div>
             </div>
           </div>
           <!-- end card-item -->
@@ -2891,7 +3257,9 @@ class="hotel-area section-bg section-padding overflow-hidden padding-right-100px
                   <span class="price__num">$88.00</span>
                   <span class="price__text">Per night</span>
                 </p>
-                
+                <a href="hotel-single.html" class="btn-text"
+                  >See details<i class="la la-angle-right"></i
+                ></a>
               </div>
             </div> -->
           </div>
@@ -2933,7 +3301,9 @@ class="hotel-area section-bg section-padding overflow-hidden padding-right-100px
                   <span class="price__num">$88.00</span>
                   <span class="price__text">Per night</span>
                 </p>
-                
+                <a href="hotel-single.html" class="btn-text"
+                  >See details<i class="la la-angle-right"></i
+                ></a>
               </div>
             </div>
           </div> -->
@@ -3013,99 +3383,83 @@ END HOTEL AREA
     
        
            
+            <div class="block">
+                <h5 class="text-dark" style="margin-top: 10px; margin-left: 15px; color: #333;">Company Links</h5>
+                <p style="margin-left: 15px;">
+                    <a th:href="@{/}">Home</a> |
+                    <a th:href="@{/about}">About</a> |
+                    <a th:href="@{/services}">Service</a> |
+                    <a th:href="@{/contact}">Contact</a>
+                </p>
+             </div>
+              
 
-<div style="display: flex; justify-content: space-around; text-align: center;">
-  <!-- Popular Cities -->
-  <div style="padding: 10px; border-radius: 5px; max-width: 300px;">
-    <h5 class="text-dark" style="margin: 10px 0; margin-left: 15px; color: #333; font-size: 18px;">Popular Cities</h5>
-    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: auto; text-align: left; margin-left: 15px;">
-      <span><a th:href="@{/Pune}">Pune</a></span>
-      <span><a th:href="@{/Mumbai}">Mumbai</a></span>
-      <span><a th:href="@{/Kolhapur}">Kolhapur</a></span>
-      <span><a th:href="@{/Satara}">Satara</a></span>
-      <span><a th:href="@{/Nashik}">Nashik</a></span>
-      <span><a th:href="@{/Ratnagiri}">Ratnagiri</a></span>
-      <span><a th:href="@{/Shirdi}">Shirdi</a></span>
-      <span><a th:href="@{/Ahmednagar}">Ahmednagar</a></span>
-      <span><a th:href="@{/Beed}">Beed</a></span>
-      <span><a th:href="@{/Jalna}">Jalna</a></span>
-      <span><a th:href="@{/Lonavala}">Lonavala</a></span>
-      <span><a th:href="@{/Akola}">Akola</a></span>
-      <span><a th:href="@{/Sindhudurg}">Sindhudurg</a></span>
-      <span><a th:href="@{/Latur}">Latur</a></span>
-      <span><a th:href="@{/Osmanabad}">Osmanabad</a></span>
-      <span><a th:href="@{/Nanded}">Nanded</a></span>
-      <span><a th:href="@{/Washim}">Washim</a></span>
-      <span><a th:href="@{/Wardha}">Wardha</a></span>
-      <span><a th:href="@{/Palghar}">Palghar</a></span>
-      <span><a th:href="@{/Chandarpur}">Chandarpur</a></span>
-      <span><a th:href="@{/Gondia}">Gondia</a></span>
-      <span><a th:href="@{/Gadchiroli}">Gadchiroli</a></span>
-      <span><a th:href="@{/Amravati}">Amravati</a></span>
-      <span><a th:href="@{/Aurangabad}">Aurangabad</a></span>
-    </div>
-  </div>
-
-  <!-- Corporate Cabs -->
-  <div style="padding: 10px; border-radius: 5px; max-width: auto;">
-    <h5 class="text-dark" style="margin: 10px 0; color: #333; font-size: 18px;">Corporate Cabs</h5>
-    <p style="margin-left: 15px; display: flex; flex-direction: column; gap: 10px;text-align: left;">
-      <span><a th:href="@{/Corporate}">Corporate Cabs in Delhi</a></span>
-      <span><a th:href="@{/Corporate3}">Corporate Cabs in Pune</a></span>
-      <span><a th:href="@{/Corporate2}">Corporate Cabs in Bangalore</a></span>
-      <span><a th:href="@{/Corporate3}">Corporate Cabs in Mumbai</a></span>
-      <span><a th:href="@{/Telangana}">Corporate Cabs in Telangana</a></span>
-      <span><a th:href="@{/Corporate5}">Corporate Cabs in Chennai</a></span>
-      <span><a th:href="@{/Corporate6}">Corporate Cabs in Indore</a></span>
-      <span><a th:href="@{/Corporate7}">Corporate Cabs in Surat</a></span>
-    </p>
-  </div>
-
-  <!-- Airport Cabs -->
-  <div style="padding: 10px; border-radius: 5px; max-width: auto;;">
-    <h5 class="text-dark" style="margin: 10px 0;color: #333; font-size: 18px;">Airport Cabs</h5>
-    <p style="margin-left: 15px; display: flex; flex-direction: column; gap: 10px;text-align: left;">
-      <a th:href="@{/Airport}">Airport Cabs in Delhi</a>
-      <a th:href="@{/Airport1}">Airport Cabs in Pune</a>
-      <a th:href="@{/Airport2}">Airport Cabs in Bangalore</a>
-      <a th:href="@{/Airport3}">Airport Cabs in Mumbai</a>
-      <a th:href="@{/Airport4}">Airport Cabs in Telangana</a>
-      <a th:href="@{/Airport6}">Airport Cabs in Surat</a>
-      <a th:href="@{/Airport5}">Airport Cabs in Indore</a>
-      <a th:href="@{/Airport7}">Airport Cabs in Chennai</a>
-    </p>
-  </div>
-
-  <!-- States -->
-  <div style="padding: 10px; border-radius: 5px; max-width: auto;">
-    <h5 class="text-dark" style="margin: 10px 0;color: #333; font-size: 18px;">States</h5>
-    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: auto; text-align: left; margin-left: 15px;">
-      <span><a th:href="@{state/Maharashtra}">Maharashtra</a></span>
-      <span><a th:href="@{state/Goa}">Goa</a></span>
-      <span><a th:href="@{state/Delhi}">Delhi</a></span>
-      <span><a th:href="@{state/Gujarat}">Gujarat</a></span>
-      <span><a th:href="@{state/Madhya Pradesh}">MP</a></span>
-      <span><a th:href="@{state/Karnataka}">Karnataka</a></span>
-      <span><a th:href="@{state/Telangana}">Telangana</a></span>
-      <span><a th:href="@{state/Uttar Pradesh}">UP</a></span>
-      <span><a th:href="@{state/Rajasthan}">Rajasthan</a></span>
-      <span><a th:href="@{state/West Bengal}">West Bengal</a></span>
-      <span><a th:href="@{state/HP}">HP</a></span>
-      <span><a th:href="@{state/Kerala}">Kerala</a></span>
-      <span><a th:href="@{state/Tamil Nadu}">Tamil Nadu</a></span>
-      <span><a th:href="@{state/Andhra Pradesh}">Andhra Pradesh</a></span>
-      <span><a th:href="@{state/Punjab}">Punjab</a></span>
-      <span><a th:href="@{state/Odisha}">Odisha</a></span>
-      <span><a th:href="@{state/Chhattisgarh}">Chhattisgarh</a></span>
-      <span><a th:href="@{state/Arunachal Pradesh}">Arunachal Pradesh</a></span>
-    </div>
-  </div>
-</div>
-
-  </div>
+            <h5 class="text-dark" style="margin-top: 10px; margin-left: 15px;">Popular Cities</h5>
+            <p style="margin-left: 15px;"
+ 
+            <span> <a th:href="@{/Mahabaleshwar}">Mahabaleshwar</a></span> |
+            <span>  <a th:href="@{/Panchagani}">Panchagani</a></li></span> |
+            <span>  <a th:href="@{/Kolhapur}">Kolhapur</a></li></span> |
+            <span>  <a th:href="@{/Satara}">Satara</a></span> |
+            <span>  <a th:href="@{/Nashik}">Nashik</a></span> |
+               <span>  <a th:href="@{/Ratnagiri}">Ratnagiri</a></span> |
+            <span>  <a th:href="@{/Shirdi}">Shirdi</a></span> |
+            <span>  <a th:href="@{/Ahmednagar}">Ahmednagar</a></span> |
+            <span>   <a th:href="@{/Sangamner}">Sangamner</a></span> |
+            <span>  <a th:href="@{/Jalana}">Jalana</a></span> |
+            <span>  <a th:href="@{/Lonavala}">Lonavala</a></span> |
+            <span>  <a th:href="@{/Bhimashankar}">Bhimashakar</a></span> |
+            <span>  <a th:href="@{/Alibag}">Alibag</a></span> |
+            <span>  <a th:href="@{/Dapoli}">Dapoli</a></span> |
+            <span>  <a th:href="@{/Trimbkeshwar}">Trimbkeshwar</a></span> |
+           <span>  <a th:href="@{/Une}">Lgatpuri</a></span> |
+            <span>  <a href="#Form">Surat</a></span> |
+            <span>   <a th:href="@{/Mumbai}">Mumbai</a></span> |
+            <span>   <a th:href="@{/Pune}">Pune</a></span>
+            </p>
+            <h5 class="text-dark" style="margin-top: 10px; margin-left: 15px;">Corporate Cabs</h5>
+            <p style="margin-left: 15px;"
+            <span>  <a th:href="@{/Corporate}">
+                Corporate Cabs in Delhi</a></span>|
+                <span>   <a th:href="@{/Corporate3}">Corporate Cabs in Pune</a></span>|
+                <span>  <a th:href="@{/Corporate2}">Corporate Cabs in Bangalore</a> </span>|
+                <span>  <a  th:href="@{/Corporate3}">Corporate Cabs in Mumbai</a> |
+                <span>  <a  th:href="@{/Telangana}">Corporate Cabs in Telangana</a></span>|
+             
+        
+                <span>  <a  th:href="@{/Corporate5}">Corporate Cabs in Chennai</a></span>|
+                <span>  <a  th:href="@{/Corporate6}">Corporate Cabs in Indor</a></span> |
+                <span>  <a  th:href="@{/Corporate7}">Corporate Cabs in Surat</a></span>
+              </p>
+              <h5 class="text-dark" style="margin-top: 10px; margin-left: 15px;">Airport Cabs</h5>
+            <p style="margin-left: 15px;">
+             <a th:href="@{/Airport}">Airport Cabs in Delhi</a> |
+              <a th:href="@{/Airport1}">Airport Cabs in Pune</a> |
+              <a th:href="@{/Airport2}">Airport Cabs in Bangalore</a> |
+              <a th:href="@{/Airport3}">Airport Cabs in Mumbai </a> |
+              <a th:href="@{/Airport4}">Airport Cabs in Telangana</a> |
+              <a th:href="@{/Airport5}">Airport Cabs in Surat</a> |
+              <a th:href="@{/Airport6}">Airport Cabs in Indor</a> |
+              <a th:href="@{/Airport7}">Airport Cabs in Chennai</a>
+            </p>
+            <h5 class="text-dark" style="margin-top: 10px; margin-left: 15px;color: black;">States</h5>
+            <p style="margin-left: 15px;"
+           <span> <a th:href="@{/Pune}">  Maharashtra</a></span> |
+           <span>   <a th:href="@{/Goa}">Goa</a></span> |
+            <span>  <a th:href="@{/Delhi}"> Delhi</a></span> |
+            <span>  <a th:href="@{/Surat}">Gujarat</a></span> |
+            <span>  <a th:href="@{/Indor}">MP</a></span> |
+            <span>  <a th:href="@{/Bangalore}">Karnataka</a></span> |
+             <span> <a th:href="@{/Telangana}">Telangana</a></span>
+              </p>
+            
+           
+            
+          </div>
       
      
-         <div class="row align-items-center" style="background-color: #f5f7fc;">
+     <div  style="background-color: #f5f7fc;">
+    <div class="row align-items-center justify-content-arround">
     <div class="col-lg-8">
       <div class="term-box footer-item" style="margin-top: 10px;">
         <p class="copy__desc">
@@ -3115,9 +3469,14 @@ END HOTEL AREA
         </p>
       </div>
     </div>
+    <div>
+     <a class="text-black" href="/privacy-policy">Privacy And Policy</a> 
+    </div>
+  </div>
     <!-- end col-lg-8 -->
-    <div class="col-lg-4" style="text-align: right; padding: 10px;">
-      <div class="footer-social-box" style="display: inline-block;">
+     <div style="display: flex; justify-content: center; align-items: center; padding-left: 20%;">
+    <div class="col-lg-4" >
+      <div class="footer-social-box" >
         <ul class="social-profile" style="list-style: none; padding: 0; margin: 0; display: inline-flex; gap: 15px;">
           <li style="display: inline;">
             <a href="https://www.facebook.com/profile.php?id=61554946222967&mibextid=ZbWKwL" 
@@ -3146,10 +3505,10 @@ END HOTEL AREA
         </ul>
       </div>
     </div>
+  </div>
     
     <!-- end col-lg-4 -->
   </div>
-      
 
 
 </div>
@@ -3220,19 +3579,19 @@ END HOTEL AREA
                 <div class="action-box text-center">
                   <p class="font-size-14">Or Sign up Using</p>
                   <ul class="social-profile py-3">
-							                    <li>
-							                      <a href="https://www.facebook.com/profile.php?id=61554946222967&mibextid=ZbWKwL" class="bg-5 text-white"><i class="lab la-facebook-f"></i></a>
-							                    </li>
-							                    <li>
-							                      <a href="https://x.com/world_trip_link"  class="bg-6 text-white"><i class="lab la-twitter"></i></a>
-							                    </li>
-							                    <li>
-							                      <a href="https://www.instagram.com/worldtriplink/" class="bg-7 text-white"><i class="lab la-instagram"></i></a>
-							                    </li>
-							                    <li>
-							                      <a href="https://www.linkedin.com/in/world-trip-link9562762a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="bg-5 text-white"><i class="lab la-linkedin-in"></i></a>
-							                    </li>
-							                  </ul>
+                    <li>
+                      <a href="#" class="bg-5 text-white"><i class="lab la-facebook-f"></i></a>
+                    </li>
+                    <li>
+                      <a href="#" class="bg-6 text-white"><i class="lab la-twitter"></i></a>
+                    </li>
+                    <li>
+                      <a href="#" class="bg-7 text-white"><i class="lab la-instagram"></i></a>
+                    </li>
+                    <li>
+                      <a href="#" class="bg-5 text-white"><i class="lab la-linkedin-in"></i></a>
+                    </li>
+                  </ul>
                 </div>
               </form>
             </div>
@@ -3311,19 +3670,19 @@ END HOTEL AREA
                 <div class="action-box text-center">
                   <p class="font-size-14">Or Sign up Using</p>
                   <ul class="social-profile py-3">
-							                    <li>
-							                      <a href="https://www.facebook.com/profile.php?id=61554946222967&mibextid=ZbWKwL" class="bg-5 text-white"><i class="lab la-facebook-f"></i></a>
-							                    </li>
-							                    <li>
-							                      <a href="https://x.com/world_trip_link"  class="bg-6 text-white"><i class="lab la-twitter"></i></a>
-							                    </li>
-							                    <li>
-							                      <a href="https://www.instagram.com/worldtriplink/" class="bg-7 text-white"><i class="lab la-instagram"></i></a>
-							                    </li>
-							                    <li>
-							                      <a href="https://www.linkedin.com/in/world-trip-link9562762a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="bg-5 text-white"><i class="lab la-linkedin-in"></i></a>
-							                    </li>
-							                  </ul>
+                    <li>
+                      <a href="#" class="bg-5 text-white"><i class="lab la-facebook-f"></i></a>
+                    </li>
+                    <li>
+                      <a href="#" class="bg-6 text-white"><i class="lab la-twitter"></i></a>
+                    </li>
+                    <li>
+                      <a href="#" class="bg-7 text-white"><i class="lab la-instagram"></i></a>
+                    </li>
+                    <li>
+                      <a href="#" class="bg-5 text-white"><i class="lab la-linkedin-in"></i></a>
+                    </li>
+                  </ul>
                 </div>
               </form>
             </div>
@@ -3374,7 +3733,7 @@ END HOTEL AREA
                       <label for="rememberchb">Remember me</label>
                     </div>
                     <p class="forgot-password">
-                      <a href="">Forgot Password?</a>
+                      <a href="recover.html">Forgot Password?</a>
                     </p>
                   </div>
                 </div>
@@ -3387,19 +3746,19 @@ END HOTEL AREA
                 <div class="action-box text-center">
                   <p class="font-size-14">Or Login Using</p>
                   <ul class="social-profile py-3">
-							                    <li>
-							                      <a href="https://www.facebook.com/profile.php?id=61554946222967&mibextid=ZbWKwL" class="bg-5 text-white"><i class="lab la-facebook-f"></i></a>
-							                    </li>
-							                    <li>
-							                      <a href="https://x.com/world_trip_link"  class="bg-6 text-white"><i class="lab la-twitter"></i></a>
-							                    </li>
-							                    <li>
-							                      <a href="https://www.instagram.com/worldtriplink/" class="bg-7 text-white"><i class="lab la-instagram"></i></a>
-							                    </li>
-							                    <li>
-							                      <a href="https://www.linkedin.com/in/world-trip-link9562762a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="bg-5 text-white"><i class="lab la-linkedin-in"></i></a>
-							                    </li>
-							                  </ul>
+                    <li>
+                      <a href="#" class="bg-5 text-white"><i class="lab la-facebook-f"></i></a>
+                    </li>
+                    <li>
+                      <a href="#" class="bg-6 text-white"><i class="lab la-twitter"></i></a>
+                    </li>
+                    <li>
+                      <a href="#" class="bg-7 text-white"><i class="lab la-instagram"></i></a>
+                    </li>
+                    <li>
+                      <a href="#" class="bg-5 text-white"><i class="lab la-linkedin-in"></i></a>
+                    </li>
+                  </ul>
                 </div>
               </form>
             </div>
