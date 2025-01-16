@@ -294,9 +294,9 @@ public class MainController {
 		return "Airport7";
 	}
 
-	@GetMapping("/Bangaloer")
-	public String Bangaloer() {
-		return "Bangaloer";
+	@GetMapping("/Bangalore")
+	public String Bangalore() {
+		return "Bangalore";
 	}
 
 	@GetMapping("/Goa")
@@ -402,6 +402,10 @@ public class PrivacyPolicyController {
     @GetMapping("/privacy-policy")
     public String showPrivacyPolicy() {
         return "privacy-policy"; // This corresponds to a view (e.g., `privacy-policy.html` or `privacy-policy.jsp`).
+    }
+	@GetMapping("/tour-search-result.html")
+    public String showtoursearchresult() {
+        return "tour-search-result.html"; 
     }
 }
 	

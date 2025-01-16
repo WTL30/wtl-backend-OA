@@ -2849,7 +2849,7 @@
                     </form>
                   </div>
                   <div class="btn-box">
-                    <a href="cruise-search-result.html" class="theme-btn"
+                    <a href="cruise-search-result" class="theme-btn"
                       >Search Now</a
                     >
                   </div>
@@ -3383,88 +3383,104 @@ END HOTEL AREA
 
 
 
-   <!-- ================================
-       START FOOTER AREA
-    
-================================= -->
+
 
 
    
     
        
-           
-            <div class="block">
-                <h5 class="text-dark" style="margin-top: 10px; margin-left: 15px; color: #333;">Company Links</h5>
-                <p style="margin-left: 15px;">
-                    <a th:href="@{/}">Home</a> |
-                    <a th:href="@{/about}">About</a> |
-                    <a th:href="@{/services}">Service</a> |
-                    <a th:href="@{/contact}">Contact</a>
-                </p>
-             </div>
+           <!-- start footer-->
+            
               
 
-            <h5 class="text-dark" style="margin-top: 10px; margin-left: 15px;">Popular Cities</h5>
-            <p style="margin-left: 15px;">
- 
-            <span> <a th:href="@{/Mahabaleshwar}">Mahabaleshwar</a></span> |
-            <span>  <a th:href="@{/Panchagani}">Panchagani</a></li></span> |
-            <span>  <a th:href="@{/Kolhapur}">Kolhapur</a></li></span> |
-            <span>  <a th:href="@{/Satara}">Satara</a></span> |
-            <span>  <a th:href="@{/Nashik}">Nashik</a></span> |
-               <span>  <a th:href="@{/Ratnagiri}">Ratnagiri</a></span> |
-            <span>  <a th:href="@{/Shirdi}">Shirdi</a></span> |
-            <span>  <a th:href="@{/Ahmednagar}">Ahmednagar</a></span> |
-            <span>   <a th:href="@{/Sangamner}">Sangamner</a></span> |
-            <span>  <a th:href="@{/Jalana}">Jalana</a></span> |
-            <span>  <a th:href="@{/Lonavala}">Lonavala</a></span> |
-            <span>  <a th:href="@{/Bhimashankar}">Bhimashakar</a></span> |
-            <span>  <a th:href="@{/Alibag}">Alibag</a></span> |
-            <span>  <a th:href="@{/Dapoli}">Dapoli</a></span> |
-            <span>  <a th:href="@{/Trimbkeshwar}">Trimbkeshwar</a></span> |
-           <span>  <a th:href="@{/Une}">Lgatpuri</a></span> |
-            <span>  <a href="#Form">Surat</a></span> |
-            <span>   <a th:href="@{/Mumbai}">Mumbai</a></span> |
-            <span>   <a th:href="@{/Pune}">Pune</a></span>
-            </p>
-            <h5 class="text-dark" style="margin-top: 10px; margin-left: 15px;">Corporate Cabs</h5>
-            <p style="margin-left: 15px;">
-            <span>  <a th:href="@{/Corporate}">
-                Corporate Cabs in Delhi</a></span>|
-                <span>   <a th:href="@{/Corporate3}">Corporate Cabs in Pune</a></span>|
-                <span>  <a th:href="@{/Corporate2}">Corporate Cabs in Bangalore</a> </span>|
-                <span>  <a  th:href="@{/Corporate3}">Corporate Cabs in Mumbai</a> |
-                <span>  <a  th:href="@{/Telangana}">Corporate Cabs in Telangana</a></span>|
-             
-        
-                <span>  <a  th:href="@{/Corporate5}">Corporate Cabs in Chennai</a></span>|
-                <span>  <a  th:href="@{/Corporate6}">Corporate Cabs in Indor</a></span> |
-                <span>  <a  th:href="@{/Corporate7}">Corporate Cabs in Surat</a></span>
-              </p>
-              <h5 class="text-dark" style="margin-top: 10px; margin-left: 15px;">Airport Cabs</h5>
-            <p style="margin-left: 15px;">
-             <a th:href="@{/Airport}">Airport Cabs in Delhi</a> |
-              <a th:href="@{/Airport1}">Airport Cabs in Pune</a> |
-              <a th:href="@{/Airport2}">Airport Cabs in Bangalore</a> |
-              <a th:href="@{/Airport3}">Airport Cabs in Mumbai </a> |
-              <a th:href="@{/Airport4}">Airport Cabs in Telangana</a> |
-              <a th:href="@{/Airport5}">Airport Cabs in Surat</a> |
-              <a th:href="@{/Airport6}">Airport Cabs in Indor</a> |
-              <a th:href="@{/Airport7}">Airport Cabs in Chennai</a>
-            </p>
-            <h5 class="text-dark" style="margin-top: 10px; margin-left: 15px;color: black;">States</h5>
-            <p style="margin-left: 15px;">
-           <span> <a th:href="@{/Pune}">  Maharashtra</a></span> |
-           <span>   <a th:href="@{/Goa}">Goa</a></span> |
-            <span>  <a th:href="@{/Delhi}"> Delhi</a></span> |
-            <span>  <a th:href="@{/Surat}">Gujarat</a></span> |
-            <span>  <a th:href="@{/Indor}">MP</a></span> |
-            <span>  <a th:href="@{/Bangalore}">Karnataka</a></span> |
-             <span> <a th:href="@{/Telangana}">Telangana</a></span>
-              </p>
-            
-           
-            
+           <div style="display: flex; justify-content: space-around; text-align: center;">
+  <!-- Popular Cities -->
+  <div style="padding: 10px; border-radius: 5px; max-width: 300px;">
+    <h5 class="text-dark" style="margin: 10px 0; margin-left: 15px; color: #333; font-size: 18px;">Popular Cities</h5>
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: auto; text-align: left; margin-left: 15px;">
+      <span><a th:href="@{/Pune}">Pune</a></span>
+      <span><a th:href="@{/Mumbai}">Mumbai</a></span>
+      <span><a th:href="@{/Kolhapur}">Kolhapur</a></span>
+      <span><a th:href="@{/Satara}">Satara</a></span>
+      <span><a th:href="@{/Nashik}">Nashik</a></span>
+      <span><a th:href="@{/Ratnagiri}">Ratnagiri</a></span>
+      <span><a th:href="@{/Shirdi}">Shirdi</a></span>
+      <span><a th:href="@{/Ahmednagar}">Ahmednagar</a></span>
+      <span><a th:href="@{/Beed}">Beed</a></span>
+      <span><a th:href="@{/Jalna}">Jalna</a></span>
+      <span><a th:href="@{/Lonavala}">Lonavala</a></span>
+      <span><a th:href="@{/Akola}">Akola</a></span>
+      <span><a th:href="@{/Sindhudurg}">Sindhudurg</a></span>
+      <span><a th:href="@{/Latur}">Latur</a></span>
+      <span><a th:href="@{/Osmanabad}">Osmanabad</a></span>
+      <span><a th:href="@{/Nanded}">Nanded</a></span>
+      <span><a th:href="@{/Washim}">Washim</a></span>
+      <span><a th:href="@{/Wardha}">Wardha</a></span>
+      <span><a th:href="@{/Palghar}">Palghar</a></span>
+      <span><a th:href="@{/Chandarpur}">Chandarpur</a></span>
+      <span><a th:href="@{/Gondia}">Gondia</a></span>
+      <span><a th:href="@{/Gadchiroli}">Gadchiroli</a></span>
+      <span><a th:href="@{/Amravati}">Amravati</a></span>
+      <span><a th:href="@{/Aurangabad}">Aurangabad</a></span>
+    </div>
+  </div>
+
+  <!-- Corporate Cabs -->
+  <div style="padding: 10px; border-radius: 5px; max-width: auto;">
+    <h5 class="text-dark" style="margin: 10px 0; color: #333; font-size: 18px;">Corporate Cabs</h5>
+    <p style="margin-left: 15px; display: flex; flex-direction: column; gap: 10px;text-align: left;">
+      <span><a th:href="@{/Corporate}">Corporate Cabs in Delhi</a></span>
+      <span><a th:href="@{/Corporate3}">Corporate Cabs in Pune</a></span>
+      <span><a th:href="@{/Corporate2}">Corporate Cabs in Bangalore</a></span>
+      <span><a th:href="@{/Corporate3}">Corporate Cabs in Mumbai</a></span>
+      <span><a th:href="@{/Telangana}">Corporate Cabs in Telangana</a></span>
+      <span><a th:href="@{/Corporate5}">Corporate Cabs in Chennai</a></span>
+      <span><a th:href="@{/Corporate6}">Corporate Cabs in Indore</a></span>
+      <span><a th:href="@{/Corporate7}">Corporate Cabs in Surat</a></span>
+    </p>
+  </div>
+
+  <!-- Airport Cabs -->
+  <div style="padding: 10px; border-radius: 5px; max-width: auto;;">
+    <h5 class="text-dark" style="margin: 10px 0;color: #333; font-size: 18px;">Airport Cabs</h5>
+    <p style="margin-left: 15px; display: flex; flex-direction: column; gap: 10px;text-align: left;">
+      <a th:href="@{/Airport}">Airport Cabs in Delhi</a>
+      <a th:href="@{/Airport1}">Airport Cabs in Pune</a>
+      <a th:href="@{/Airport2}">Airport Cabs in Bangalore</a>
+      <a th:href="@{/Airport3}">Airport Cabs in Mumbai</a>
+      <a th:href="@{/Airport4}">Airport Cabs in Telangana</a>
+      <a th:href="@{/Airport6}">Airport Cabs in Surat</a>
+      <a th:href="@{/Airport5}">Airport Cabs in Indore</a>
+      <a th:href="@{/Airport7}">Airport Cabs in Chennai</a>
+    </p>
+  </div>
+
+  <!-- States -->
+  <div style="padding: 10px; border-radius: 5px; max-width: auto;">
+    <h5 class="text-dark" style="margin: 10px 0;color: #333; font-size: 18px;">States</h5>
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: auto; text-align: left; margin-left: 15px;">
+      <span><a th:href="@{state/Maharashtra}">Maharashtra</a></span>
+      <span><a th:href="@{state/Goa}">Goa</a></span>
+      <span><a th:href="@{state/Delhi}">Delhi</a></span>
+      <span><a th:href="@{state/Gujarat}">Gujarat</a></span>
+      <span><a th:href="@{state/Madhya Pradesh}">MP</a></span>
+      <span><a th:href="@{state/Karnataka}">Karnataka</a></span>
+      <span><a th:href="@{state/Telangana}">Telangana</a></span>
+      <span><a th:href="@{state/Uttar Pradesh}">UP</a></span>
+      <span><a th:href="@{state/Rajasthan}">Rajasthan</a></span>
+      <span><a th:href="@{state/West Bengal}">West Bengal</a></span>
+      <span><a th:href="@{state/HP}">HP</a></span>
+      <span><a th:href="@{state/Kerala}">Kerala</a></span>
+      <span><a th:href="@{state/Tamil Nadu}">Tamil Nadu</a></span>
+      <span><a th:href="@{state/Andhra Pradesh}">Andhra Pradesh</a></span>
+      <span><a th:href="@{state/Punjab}">Punjab</a></span>
+      <span><a th:href="@{state/Odisha}">Odisha</a></span>
+      <span><a th:href="@{state/Chhattisgarh}">Chhattisgarh</a></span>
+      <span><a th:href="@{state/Arunachal Pradesh}">Arunachal Pradesh</a></span>
+    </div>
+  </div>
+</div>
+</div>    
           </div>
       
      
