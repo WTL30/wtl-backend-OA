@@ -24,9 +24,11 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -48,6 +50,7 @@ import com.workshop.Service.TripService;
 import com.workshop.Service.UserDetailServiceImpl;
 
 @Controller
+@CrossOrigin(origins = "http://localhost:3001,http://localhost:3000")
 public class BookingController {
 	@Autowired
 	BookingService ser;
@@ -579,18 +582,35 @@ public class BookingController {
 	}
 	
 	
-	@DeleteMapping("/deleteBooking")
-	public void deleteBooking(@RequestBody Map<String, String> requestBody) {
-		String ids  = requestBody.get("id");
-		System.out.println(ids);
-		int id  = Integer.parseInt(ids);
-		System.out.println(id);
+	@DeleteMapping("/delete-booking/{bookingId}")
+    public ResponseEntity<String> deleteBooking(@PathVariable String bookingId) {
+        String responseMessage = ser.deleteBookingByBookingId(bookingId);
+        if (responseMessage.contains("not found")) {
+            return ResponseEntity.notFound().build(); // Return 404 Not Found if the booking does not exist
+        }
+        return ResponseEntity.ok(responseMessage); // Return 200 OK with the success message
+    }
+	// @DeleteMapping("/deleteBooking/{id}")
+	// public void deleteBooking(@RequestBody Map<String, String> requestBody) {
+	// 	 String ids  = requestBody.get("id");
+	// 	// System.out.println(ids);
+	// 	int id  = Integer.parseInt(ids);		
+	// 	//public ResponseEntity<Booking> 
+	// 	//deleteBooking(@PathVariable String bookingId) {
+
+	// 	// //System.out.println(id);
 		
 		
-		Booking b = ser.findBookingbyId(id);
-		System.out.println(b);
-		ser.deleteBooking(b);
-	}
+	// 	// Booking b = ser.findBookingbyId(id);
+	// 	// //System.out.println(b);
+	// 	// ser.deleteBooking(b);	
+	// 	ser.deleteBooking1(id);
+	// }
+           
+        
+    
+
+	
 	
 	
 	 @PostMapping("/getPrice")
@@ -718,8 +738,42 @@ public class BookingController {
 	     // Redirect to the next page (replace "redirect:/nextPage" with the actual destination URL)
 	     return "invoice";
 	 }
+
 	 
+	 @Autowired
+	 private CabInfoService cabInfoService;
+ 
+	//  @GetMapping("/invoice")
+	//  public ResponseEntity<List<CabInfo>> getAllCabs() {
+	// 	 List<CabInfo> cabList = cabInfoService.getAll();
+	// 	 return ResponseEntity.ok(cabList);
+	//  }
+
+	// @Autowired
+    // private BookingService bookingService;
+	// @GetMapping("/invoice")
+    // public ResponseEntity<List<Booking>> getAllBookings() {
+    //     List<Booking> bookings = bookingService.getAll();
+    //     return ResponseEntity.ok(bookings); // Return the list of bookings with HTTP 200 OK status
+    // }
 	 
+	@GetMapping("/invoice")
+    public ResponseEntity<List<CabInfo>> getInvoice() {
+        // Retrieve the list of CabInfo objects
+        List<CabInfo> cabList = cabInfoService.getAll();
+        
+        // Return the list as a JSON response
+        return ResponseEntity.ok(cabList);
+    }
+
+	@Autowired
+    private BookingService bookingService;
+
+    @GetMapping("/details")
+    public ResponseEntity<List<Booking>> getAllBookings() {
+        List<Booking> bookings = bookingService.getAllBookings();
+        return ResponseEntity.ok(bookings); // Return the list of bookings with HTTP 200 OK status
+    }
 	 
 	 @PostMapping("/popup/save")
 		public String save(@ModelAttribute Popup popup) {

@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 import com.workshop.Entity.Booking;
 import com.workshop.Repo.BookingRepo;
 
+import jakarta.transaction.Transactional;
+
 @Service
 public class BookingService {
 	
@@ -43,9 +45,32 @@ public class BookingService {
 		 return repo.findById(id).get();
 		 
 	 }
+
+	 public List<Booking> getAllBookings() {
+        return repo.findAllByOrderByIdDesc();
+    }
+
 	 
 	 public void deleteBooking(Booking booking) {
 		 repo.delete(booking);
 	 }
+
+	//  public void deleteBooking1(int id) {
+	// 	repo.delete(id);
+		
+	// }
+      
+    @Transactional
+		public String deleteBookingByBookingId(String bookingId) {
+        // Check if the booking exists before attempting to delete
+		//System.out.println(bookingId);
+        if (repo.existsByBookingId(bookingId)) {
+            repo.deleteByBookingId(bookingId); // Use the custom delete method
+            return "Booking with ID " + bookingId + " has been deleted successfully.";
+        } else {
+            return "Booking with ID " + bookingId + " not found.";
+        }
+    }
+
 
 }

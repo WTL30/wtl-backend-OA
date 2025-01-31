@@ -16,4 +16,12 @@ public interface BookingRepo extends JpaRepository<Booking, Integer>{
 
 	
 	List<Booking> findByUserId(String userid);
+
+	List<Booking> findAllByOrderByIdDesc();
+
+	void deleteByBookingId(String bookingId);
+	boolean existsByBookingId(String bookingId);
+
+
+
 }
