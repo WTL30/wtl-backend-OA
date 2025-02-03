@@ -50,6 +50,10 @@ public class BookingService {
         return repo.findAllByOrderByIdDesc();
     }
 
+	
+    public int getTripTypeCount(String tripType) {
+        return repo.countByTripType(tripType);
+    }
 	 
 	 public void deleteBooking(Booking booking) {
 		 repo.delete(booking);

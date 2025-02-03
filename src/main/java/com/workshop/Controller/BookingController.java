@@ -774,6 +774,13 @@ public class BookingController {
         List<Booking> bookings = bookingService.getAllBookings();
         return ResponseEntity.ok(bookings); // Return the list of bookings with HTTP 200 OK status
     }
+
+	
+    @GetMapping("/count/{tripType}")
+    public ResponseEntity<Integer> getTripTypeCount(@PathVariable String tripType) {
+        int count = bookingService.getTripTypeCount(tripType);
+        return ResponseEntity.ok(count);
+    }
 	 
 	 @PostMapping("/popup/save")
 		public String save(@ModelAttribute Popup popup) {

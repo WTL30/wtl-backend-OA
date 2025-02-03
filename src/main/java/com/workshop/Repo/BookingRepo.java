@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import com.workshop.Entity.Booking;
@@ -22,6 +23,8 @@ public interface BookingRepo extends JpaRepository<Booking, Integer>{
 	void deleteByBookingId(String bookingId);
 	boolean existsByBookingId(String bookingId);
 
+	 @Query("SELECT COUNT(b) FROM Booking b WHERE b.tripType = :tripType")
+    int countByTripType(@Param("tripType") String tripType);
 
 
 }
